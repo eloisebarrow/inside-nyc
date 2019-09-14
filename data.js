@@ -96,5 +96,5 @@ const eloiseSitesData = [
 
 module.exports = {
   eloiseRestaurantData,
-  eloiseSitesData
-}
+  eloiseSitesData,
+};
