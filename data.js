@@ -44,7 +44,7 @@ const food = [
     image_url: "https://pixel.nymag.com/imgs/listings/restaurants/corner-bistro/corner-bistro-01.w600.h315.2x.jpg"
   },
   {
-    name: Minca,
+    name: "Minca",
     borough: "Manhattan",
     address: "536 East 5th Street",
     website: "http://newyorkramen.com/minca/",
