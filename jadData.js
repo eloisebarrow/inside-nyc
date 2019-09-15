@@ -1,0 +1,127 @@
+const foodData = [
+  {
+    name : "Westlight",
+    borough : "Brooklyn",
+    website : "http://westlightnyc.com/",
+    description : "A cool Brooklyn rooftop bar with an amazing view of Manhattan",
+    image_url : "https://s3-media1.fl.yelpcdn.com/bphoto/XfAAMFcrxrQkmBV_0BgmYw/l.jpg",
+    address : "111 N. 12TH ST, BROOKLYN, NY 11249 22ND FLOOR",
+    latitude : 40.724270,
+    longitude : -73.957610,
+    is_fave : false
+  },
+  {
+    name : "Peter Lugar Steak House",
+    borough : "Brooklyn",
+    website : "https://peterluger.com/",
+    image_url : "http://www.johnnyprimesteaks.com/wp-content/uploads/2017/03/DSC03997-672x372.jpg",
+    description" : "Cash-only steak icon where old-school waiters serve aged beef in a German beer hall setting.",
+    address : "178 Broadway, Brooklyn, NY 11211",
+    latitude : 40.709751,
+    longitude : -73.962593,
+    is_fave : false
+  },
+  {
+    name : "Raku",
+    borough : "Manhattan",
+    website : "http://rakunyc.com/",
+    image_url : "https://scontent-iad3-1.cdninstagram.com/vp/2b5008e236f983664ccf7d41b76851ec/5DF6DC25/t51.2885-15/sh0.08/e35/s640x640/69688739_129760638347815_3223837686279502445_n.jpg?_nc_ht=scontent-iad3-1.cdninstagram.com&_nc_cat=107",
+    description : "Udon specialist offering gourmet noodle soups & other traditional Japanese bites.",
+    address : "48 Macdougal St, New York, NY 10012",
+    latitude : 40.727240,
+    longitude : -74.002520,
+    is_fave : false
+  },
+  {
+    name : "Sushi Zo",
+    borough : "Manhattan",
+    website : 'http://sushizo.us/',
+    image_url : "https://www.brendanhburns.com/wp-content/uploads/2016/07/DSC01107-600x709.jpg",
+    description : "Arguably, the best omakase in the city.",
+    address : "88 W 3rd St New York, NY 10012",
+    latitude : 40.729780,
+    longitude : -73.999250,
+    is_fave : false
+  },
+  {
+    name : "Attaboy",
+    borough : "Manhattan",
+    website : 'http://attaboy.us/',
+    image_url : "https://pixel.nymag.com/imgs/listings/restaurants/attaboy/attaboy-01.w1200.h630.jpg",
+    description : "A cool speakeasy style bar hidden in the lower east side.",
+    address : "134 Eldridge St., New York, NY, 10002",
+    latitude : 40.718860,
+    longitude : -73.991330,
+    is_fave : false
+  }
+];
+
+const funData = [
+  {
+    name:"Washington Square Park",
+    borough:"Manhattan",
+    website: "https://washingtonsquareparkconservancy.org/visit-us/",
+    description:"A well-known and iconic park in lower Manhattan",
+    image_url: "https://imgs.6sqft.com/wp-content/uploads/2018/08/01103439/WashingtonSquarePark.png",
+    address:"Washington Square Park is the heart of Greenwich Village – located at the base of Fifth Avenue between MacDougal Street and University Place.",
+    latitude: 40.730900,
+    longitude: -73.996460,
+    is_fave: false,
+  },
+  {
+    name:"DUMBO",
+    borough:"Brooklyn",
+    website: "https://www.tripsavvy.com/dumbo-vistors-guide-441920",
+    description:"DUMBO short for Down Under the Manhattan Bridge Overpass) is a neighborhood in the New York City borough of Brooklyn.",
+    image_url: "https://www.tripsavvy.com/thmb/vi7NUtol2xXJzCuPKReP_YWwBfA=/350x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-540763429-58fb923c5f9b581d59426e03.jpg",
+    address:"New York, NY 11201",
+    latitude: 40.692990,
+    longitude: -73.990770,
+    is_fave: false,
+  },
+  {
+    name:"The High Line",
+    borough:"Manhattan",
+    website: "https://www.thehighline.org/",
+    description:"The High Line is a 1.45-mile-long elevated linear park, greenway and rail trail created on a former New York Central Railroad spur.",
+    image_url: "https://media.timeout.com/images/102540127/630/472/image.jpg",
+    address:"New York, NY 10011",
+    latitude: 40.748690,
+    longitude: -74.007690,
+    is_fave: false,
+  },
+  {
+    name:"The Vessel",
+    borough:"Manhattan",
+    website: "https://www.hudsonyardsnewyork.com/discover/vessel",
+    description:"The Vessel is the extraordinary centerpiece of Hudson Yards is its spiral staircase, a soaring new landmark meant to be climbed.",
+    image_url: "https://upload.wikimedia.org/wikipedia/commons/f/f6/Hudson_Yards_Plaza_March_2019_53.jpg",
+    address:"The Shops and Restaurants at Hudson Yards, New York, NY 10001",
+    latitude: 40.753685,
+    longitude: -73.999161,
+    is_fave: false,
+  },
+  {
+    name:"St. Marks Place",
+    borough:"Manhattan",
+    website: "https://www.nycgo.com/attractions/st-marks-place",
+    description:"Eighth Street in Manhattan between Third Avenue and Avenue A is known as St. Mark's Place—arguably the East Village’s most notable street and a place bursting with culture via its retail shops, street vendors, restaurants and nightlife.",
+    image_url: "https://lonelyplanetimages.imgix.net/a/g/hi/t/c10eee92e54bace825b28b641d7d5651-st-marks-place.jpg?fit=crop&w=600&h=260, https://lonelyplanetimages.imgix.net/a/g/hi/t/c10eee92e54bace825b28b641d7d5651-st-marks-place.jpg?fit=crop&w=1200&h=520 2x",
+    address:"8th Street from Ave A to Third Ave, East Village, New York, NY 10011, 10003, 10009",
+    latitude: 40.728590,
+    longitude: -73.987650,
+    is_fave: false,
+  },
+  {
+    name:"Empire State Building",
+    borough:"Manhattan",
+    website: "https://www.esbnyc.com/",
+    description:"Eighth Street in Manhattan between Third Avenue and Avenue A is known as St. Mark's Place—arguably the East Village’s most notable street and a place bursting with culture via its retail shops, street vendors, restaurants and nightlife.",
+    image_url: "https://aws-tiqets-cdn.imgix.net/images/content/cca6a94da73f40bf8e83012b21fd4226.jpg?auto=format&fit=crop&ixlib=python-1.1.2&q=70&s=e4570998813b2c0a5dfec3b178cd3d45&w=800&h=800&dpr=2",
+    address:"20 W 34th St, New York, NY 10001",
+    latitude: 40.754910,
+    longitude: -73.994100,
+    is_fave: false,
+  }
+
+module.exports = { food, fun }
