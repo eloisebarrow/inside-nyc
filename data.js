@@ -345,8 +345,7 @@ const fun = [
   }
 ];
 
-export.modules = {
+module.exports = {
   food,
   fun,
 };
-
