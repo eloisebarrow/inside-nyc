@@ -7,7 +7,7 @@ Eloise Barrow
 <br>AJ Jernigan
 
 ## Project Links
-Github repo: https://github.com/eloisebarrow/seeNYC
+- [View Github Repo](https://github.com/eloisebarrow/seeNYC)
 <br>Deployment: TBA
 
 ## Project Description
@@ -15,8 +15,13 @@ Github repo: https://github.com/eloisebarrow/seeNYC
 seeNYC is a concierge app that is built for tourists by New Yorkers. Users can browse a curated list of the best restaurants and sites according to locals. They also have the option to create an account and save their favorites to a personal list.
 
 ## Installation Instructions
+Type the following into the command line in the project's root folder:
 
-TBD
+```npm i body-parser cors express morgan sequelize pg bcrypt jsonwebtoken nodemon```
+
+Type the following inside the client folder:
+
+```npm i```
 
 ## Technologies Used
 
@@ -63,25 +68,21 @@ Individual comes to New York on vacation looking for things to do. They open the
 ## PostMVP
 
 - Reset password functionality
-- Attach a map to individual destinatino pages
+- Attach a map to individual destination pages
 - Additional site/restaurant data
 
 ## Wireframes
 
-TBD
+![Wireframe](https://res.cloudinary.com/jadscloudinary/image/upload/v1568571423/seeNYC_wireframes_sbsp6z.png)
 
-##ERD
+## ERD
 
-https://drive.google.com/file/d/15lGRzK_Hznqutlp-rQ1VUL7Euo0yYoh6/view
+- [View ERD Diagram](https://drive.google.com/file/d/15lGRzK_Hznqutlp-rQ1VUL7Euo0yYoh6/view)
 
 
 ## React Architecture
 
-https://drive.google.com/file/d/1Ez8zWn7taYAG9kxlC6VrEyWoInrY7N8q/view
-
-## Component Breakdown
-
-TBD
+- [View React Architecture Diagram](https://drive.google.com/file/d/1Ez8zWn7taYAG9kxlC6VrEyWoInrY7N8q/view)
 
 ## Time-Priority Matrix
 
