@@ -68,7 +68,7 @@ Individual comes to New York on vacation looking for things to do. They open the
 
 ## Wireframes
 
-
+TBD
 
 ##ERD
 
@@ -92,9 +92,9 @@ TBD
 
 ## Additional Libraries
 
-Mapbox
+Mapbox (PostMVP)
 
 ## Issues and Resolutions
 
 **ERROR**: TBD
-**RESOLUTION**: TBD
+<BR>**RESOLUTION**: TBD
