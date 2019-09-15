@@ -7,12 +7,12 @@ Eloise Barrow
 <br>AJ Jernigan
 
 ## Project Links
-Github repo: https://github.com/eloisebarrow/inside-nyc
+Github repo: https://github.com/eloisebarrow/seeNYC
 <br>Deployment: TBA
 
 ## Project Description
 
-seeNYC (name subject to change) is a concierge app that is built for tourists by New Yorkers. Users can browse a curated list of the best restaurants and sites according to locals. They also have the option to create an account and save their favorites to a personal list.
+seeNYC is a concierge app that is built for tourists by New Yorkers. Users can browse a curated list of the best restaurants and sites according to locals. They also have the option to create an account and save their favorites to a personal list.
 
 ## Installation Instructions
 
