@@ -73,7 +73,7 @@ Individual comes to New York on vacation looking for things to do. They open the
 
 ## Wireframes
 
-![Wireframe](https://res.cloudinary.com/jadscloudinary/image/upload/v1568571423/seeNYC_wireframes_sbsp6z.png)
+- [Wireframes](https://res.cloudinary.com/jadscloudinary/image/upload/v1568571423/seeNYC_wireframes_sbsp6z.png)
 
 ## ERD
 
@@ -83,13 +83,6 @@ Individual comes to New York on vacation looking for things to do. They open the
 ## React Architecture
 
 - [View React Architecture Diagram](https://drive.google.com/file/d/1Ez8zWn7taYAG9kxlC6VrEyWoInrY7N8q/view)
-
-## Time-Priority Matrix
-
-| Component | Priority | Estimated Time | Time Invested | Actual Time |
-| --- | :---: |  :---: | :---: | :---: |
-|           |          |            |                 |               |
-| Total |  |  |  |  |
 
 ## Additional Libraries
 
