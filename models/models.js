@@ -42,19 +42,8 @@ Rating.init({
   modelName: 'rating'
 });
 
-class Favorite extends Sequelize.Model {}
-Favorite.init({
-
-}, {
-  sequelize: db,
-  modelName: 'favorite'
-});
-
-User.hasMany(Favorite, { through: 'user_favorites' });
-User.hasMany(Rating, { through: 'user_ratings' });
-
-Favorite.belongsToMany(Destination, { through: 'favorite_destinations' });
-Destination.belongsToMany(Favorite, { through: 'destination_favorites' });
+User.hasMany(Destination, { through: 'user_favorites' });
+Destination.belongsTo(User, { through: 'user_favorites' });
 
 Destination.belongsToMany(Rating, { through: 'destination_ratings' });
 Rating.belongsToMany(Destination, { through: 'rating_destinations' });
