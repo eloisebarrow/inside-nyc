@@ -5,7 +5,7 @@ const logger = require('morgan');
 
 const sitesController = require('./controllers/sitesController');
 const bitesController = require('./controllers/bitesController');
-const favorites = require('./controllers/favoritesController');
+// const favorites = require('./controllers/favoritesController');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
