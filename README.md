@@ -96,5 +96,5 @@ Mapbox (PostMVP)
 
 ## Issues and Resolutions
 
-**ERROR**: TBD
-<BR>**RESOLUTION**: TBD
+**ERROR**: Data would not generate from our seed file, error read "Cannot read property length of undefined"
+<BR>**RESOLUTION**: We had to import the data in its own variable instead of through object destructuring.
