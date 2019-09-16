@@ -342,6 +342,4 @@ const destinations = [
   }
 ];
 
-module.exports = {
-  destinations
-};
+module.exports = destinations;
