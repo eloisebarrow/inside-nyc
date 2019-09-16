@@ -1,4 +1,4 @@
-const { Destination } = require('./models');
+const { Destination, User } = require('./models');
 const data = require('./data');
 
 
@@ -10,12 +10,23 @@ const genDestinations = async () => {
   }
 };
 
+const genUser = async () => {
+  try {
+    const testUser = await User.create({
+      username: 'test@gmail.com',
+      nickname: 'user1',
+    });
+  } catch(e) {
+    console.log(e.message)
+  }
+};
+
 const main = async () => {
   await Destination.destroy({
     where: {},
   });
   await genDestinations();
-  await Destination.bulkCreate(data);
+  await genUser();
   process.exit();
 };
 
