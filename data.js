@@ -1,4 +1,4 @@
-const food = [
+const destinations = [
   {
     name: "Lil Frankies",
     borough: "Manhattan",
@@ -7,8 +7,8 @@ const food = [
     description: "Casual Italian - great atmosphere and food, don't miss the truffle pizza.",
     latitude: 40.7236056,
     longitude: -73.9906031,
-    is_fave: false,
-    image_url: "https://sfo2.digitaloceanspaces.com/couchsessions-api/2019/06/3726010511_07c823fd60-449x337.jpg"
+    image_url: "https://sfo2.digitaloceanspaces.com/couchsessions-api/2019/06/3726010511_07c823fd60-449x337.jpg",
+    type: "food"
   },
   {
     name: "Death & Co",
@@ -18,8 +18,8 @@ const food = [
     description: "Speakeasy that opened when speakeasys were cool - still serves one of the best martinis in the city.",
     latitude: 40.72592,
     longitude: -73.9868392,
-    is_fave: false,
-    image_url: "https://d37219swed47g7.cloudfront.net/media/reviews/death-co/banners/Death-Co_0.jpg"
+    image_url: "https://d37219swed47g7.cloudfront.net/media/reviews/death-co/banners/Death-Co_0.jpg",
+    type: "food"
   },
   {
     name: "The Grill",
@@ -29,8 +29,8 @@ const food = [
     description: "Upscale dining - the pasta a la presse is la best.",
     latitude: 40.7583177,,
     longitude: -73.9740621,
-    is_fave: false,
-    image_url: "https://lh3.googleusercontent.com/-wSdVqdHaPgyDu-ZCIIfA_HJFLRnyaB1k-mCdiuHRm8vhepFo8RNUdxVhTrtxUKtroNQc-aG_EkN0ufpuVF5ArjbxrDS5Q=s1600-e7-v1-rj"
+    image_url: "https://lh3.googleusercontent.com/-wSdVqdHaPgyDu-ZCIIfA_HJFLRnyaB1k-mCdiuHRm8vhepFo8RNUdxVhTrtxUKtroNQc-aG_EkN0ufpuVF5ArjbxrDS5Q=s1600-e7-v1-rj",
+    type: "food"
   },
   {
     name: "Corner Bistro",
@@ -40,8 +40,8 @@ const food = [
     description: "Old school bar that serves local beer McSorleys and one of the cheapest (good) burgers around.",
     latitude: 40.7379852,
     longitude: -74.0059257,
-    is_fave: false,
-    image_url: "https://pixel.nymag.com/imgs/listings/restaurants/corner-bistro/corner-bistro-01.w600.h315.2x.jpg"
+    image_url: "https://pixel.nymag.com/imgs/listings/restaurants/corner-bistro/corner-bistro-01.w600.h315.2x.jpg",
+    type: "food"
   },
   {
     name: "Minca",
@@ -51,8 +51,8 @@ const food = [
     description: "Super casual, delicious ramen.",
     latitude: 40.723998,
     longitude: -73.9851431,
-    is_fave: false,
-    image_url: "https://assets3.thrillist.com/v1/image/1675480/size/tmg-article_default_mobile.jpg"
+    image_url: "https://assets3.thrillist.com/v1/image/1675480/size/tmg-article_default_mobile.jpg",
+    type: "food"
   },
   {
     name : "Westlight",
@@ -63,7 +63,7 @@ const food = [
     address : "111 N. 12TH ST, BROOKLYN, NY 11249 22ND FLOOR",
     latitude : 40.724270,
     longitude : -73.957610,
-    is_fave : false
+    type: "food"
   },
   {
     name : "Peter Lugar Steak House",
@@ -74,7 +74,7 @@ const food = [
     address : "178 Broadway, Brooklyn, NY 11211",
     latitude : 40.709751,
     longitude : -73.962593,
-    is_fave : false
+    type: "food"
   },
   {
     name : "Raku",
@@ -85,7 +85,7 @@ const food = [
     address : "48 Macdougal St, New York, NY 10012",
     latitude : 40.727240,
     longitude : -74.002520,
-    is_fave : false
+    type: "food"
   },
   {
     name : "Sushi Zo",
@@ -96,7 +96,7 @@ const food = [
     address : "88 W 3rd St New York, NY 10012",
     latitude : 40.729780,
     longitude : -73.999250,
-    is_fave : false
+    type: "food"
   },
   {
     name : "Attaboy",
@@ -107,7 +107,7 @@ const food = [
     address : "134 Eldridge St., New York, NY, 10002",
     latitude : 40.718860,
     longitude : -73.991330,
-    is_fave : false
+    type: "food"
   },
    {
     name: "Tony's di Napoli",
@@ -118,7 +118,7 @@ const food = [
     latitude: 40.756512,
     longitude: -73.985382,
     image_url: "https://resizer.otstatic.com/v2/photos/huge/25774496.jpg",
-    is_fave: false
+    type: "food"
   },
   {
     name: "BlueBird London",
@@ -129,7 +129,7 @@ const food = [
     latitude: 40.768429,
     longitude: -73.983070,
     image_url: "https://cdn.vox-cdn.com/thumbor/Ug1g4W9b7ZTR3J02sKdGaDMjbC8=/0x0:5760x3840/1200x0/filters:focal(0x0:5760x3840):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/12922207/Bluebird_28.jpg",
-    is_fave: false
+    type: "food"
   },
   {
     name: "Peking Duck House",
@@ -140,7 +140,7 @@ const food = [
     latitude: 40.714650,
     longitude: -73.998540,
     image_url: "https://media-cdn.tripadvisor.com/media/photo-s/07/d7/d2/b2/peking-duck-house.jpg",
-    is_fave: false
+    type: "food"
   },
   {
     name: "Wo Hop",
@@ -151,7 +151,7 @@ const food = [
     latitude: 40.714260,
     longitude: -73.999008,
     image_url: "https://i.pinimg.com/originals/45/53/0d/45530de7200eab8fa1e19643a331320b.png",
-    is_fave: false
+    type: "food"
   },
   {
     name: "Down the Hatch",
@@ -162,11 +162,8 @@ const food = [
     latitude: 40.732470,
     longitude: -74.001570,
     image_url: "https://media.timeout.com/images/103161186/630/472/image.jpg",
-    is_fave: false
-  }
-];
-
-const fun = [
+    type: "food"
+  },
   {
     name : "Greenwood Cemetery",
     borough: "Brooklyn",
@@ -175,8 +172,8 @@ const fun = [
     description: "One of the oldest cemetaries in the 5 boroughs, beautiful and quiet.",
     latitude: 40.6580779,
     longitude: -73.9970434,
-    is_fave: false,
-    image_url: "https://irishamerica.com/wp-content/uploads/2013/01/Green-Wood_Cemetery-Lake.jpg"
+    image_url: "https://irishamerica.com/wp-content/uploads/2013/01/Green-Wood_Cemetery-Lake.jpg",
+    type: "fun"
   },
   {
     name: "Coney Island",
@@ -186,8 +183,8 @@ const fun = [
     description: "Ride the cyclone and grab a hot dog from Nathan's (attractions are seasonal).",
     latitude: 40.5753293,
     longitude: -73.9819771,
-    is_fave: false,
-    image_url: "https://assets3.thrillist.com/v1/image/2828293/size/gn-gift_guide_variable_c.jpg"
+    image_url: "https://assets3.thrillist.com/v1/image/2828293/size/gn-gift_guide_variable_c.jpg",
+    type: "fun"
   },
   {
     name: "Rubin Museum of Art",
@@ -197,8 +194,8 @@ const fun = [
     description: "Unique exhibitions centered on Himalayan art.",
     latitude: 40.7401773,
     longitude: -74.0000082,
-    is_fave: false,
-    image_url: "https://coleav.com/wp-content/uploads/2016/08/Rubin-museum-Exterior-NYC.jpg"
+    image_url: "https://coleav.com/wp-content/uploads/2016/08/Rubin-museum-Exterior-NYC.jpg",
+    type: "fun"
   },
   {
     name: "The Met Cloisters",
@@ -208,8 +205,8 @@ const fun = [
     description: "Beautiful offshoot of The Met, make sure to check out the park for great views of the Hudson river.",
     latitude: 40.8648628,
     longitude: -73.9339215,
-    is_fave: false,
-    image_url: "https://secretnyc.co/wp-content/uploads/2019/02/cloisters.jpg"
+    image_url: "https://secretnyc.co/wp-content/uploads/2019/02/cloisters.jpg",
+    type: "fun"
   },
   {
     name: "Blue Note Jazz Club",
@@ -219,8 +216,8 @@ const fun = [
     description: "Old school jazz club that still hosts some of the greatest old and current musicians.",
     latitude: 40.7309083,
     longitude: -74.0028498,
-    is_fave: false,
-    image_url: "https://i.pinimg.com/originals/e7/c9/b9/e7c9b935700d409a2999a587b44e28d9.jpg"
+    image_url: "https://i.pinimg.com/originals/e7/c9/b9/e7c9b935700d409a2999a587b44e28d9.jpg",
+    type: "fun"
   },
   {
     name:"Washington Square Park",
@@ -231,7 +228,7 @@ const fun = [
     address:"Washington Square Park is the heart of Greenwich Village – located at the base of Fifth Avenue between MacDougal Street and University Place.",
     latitude: 40.730900,
     longitude: -73.996460,
-    is_fave: false,
+    type: "fun"
   },
   {
     name:"DUMBO",
@@ -242,7 +239,7 @@ const fun = [
     address:"New York, NY 11201",
     latitude: 40.692990,
     longitude: -73.990770,
-    is_fave: false,
+    type: "fun"
   },
   {
     name:"The High Line",
@@ -253,7 +250,7 @@ const fun = [
     address:"New York, NY 10011",
     latitude: 40.748690,
     longitude: -74.007690,
-    is_fave: false,
+    type: "fun"
   },
   {
     name:"The Vessel",
@@ -264,7 +261,7 @@ const fun = [
     address:"The Shops and Restaurants at Hudson Yards, New York, NY 10001",
     latitude: 40.753685,
     longitude: -73.999161,
-    is_fave: false,
+    type: "fun"
   },
   {
     name:"St. Marks Place",
@@ -275,7 +272,7 @@ const fun = [
     address:"8th Street from Ave A to Third Ave, East Village, New York, NY 10011, 10003, 10009",
     latitude: 40.728590,
     longitude: -73.987650,
-    is_fave: false,
+    type: "fun"
   },
   {
     name:"Empire State Building",
@@ -286,7 +283,7 @@ const fun = [
     address:"20 W 34th St, New York, NY 10001",
     latitude: 40.754910,
     longitude: -73.994100,
-    is_fave: false,
+    type: "fun"
   },
   {
     name: "Brooklyn Bridge",
@@ -297,7 +294,7 @@ const fun = [
     latitude: 40.7061,
     longitude: -73.9969,
     image_url: "https://upload.wikimedia.org/wikipedia/commons/f/f0/Brooklyn_Bridge_Postdlf.jpg",
-    is_fave: false
+    type: "fun"
   },
   {
     name: "Freedom Tower",
@@ -308,7 +305,7 @@ const fun = [
     latitude: 40.7127,
     longitude: -74.0134,
     image_url: "https://imagez.tmz.com/image/4b/o/2017/06/14/4b90f50f43f55a1c8356359673af4b2d_md.jpg",
-    is_fave: false
+    type: "fun"
   },
   {
     name: "Rockefeller Center",
@@ -319,7 +316,7 @@ const fun = [
     latitude: 40.7587,
     longitude: -73.9787,
     image_url: "https://cdn.getyourguide.com/img/tour_img-1907147-146.jpg",
-    is_fave: false
+    type: "fun"
   },
   {
     name: "Central Park Zoo",
@@ -330,7 +327,7 @@ const fun = [
     latitude: 40.7678,
     longitude: -73.9718,
     image_url: "http://assets.centralparknyc.org/images/things-to-see-and-do/zoo-l.jpg",
-    is_fave: false
+    type: "fun"
   },
   {
     name: "Times Square",
@@ -341,11 +338,10 @@ const fun = [
     latitude:40.7590,
     longitude: -73.9845,
     image_url: "https://upload.wikimedia.org/wikipedia/commons/4/47/New_york_times_square-terabass.jpg",
-    is_fave: false
+    type: "fun"
   }
 ];
 
 module.exports = {
-  food,
-  fun,
+  destinations
 };
