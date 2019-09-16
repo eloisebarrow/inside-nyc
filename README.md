@@ -34,6 +34,9 @@ React
 <br>Bcrypt
 <br>JSON Web Token
 <br>Nodemon
+<br>Morgan
+<br>react-router-dom
+<br>axios 
 
 ## API Description
 
