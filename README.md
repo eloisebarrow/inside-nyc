@@ -12,7 +12,7 @@ Eloise Barrow
 
 ## Project Description
 
-seeNYC is a concierge app that is built for tourists by New Yorkers. Users can browse a curated list of the best restaurants and sites according to locals. They also have the option to create an account and save their favorites to a personal list.
+seeNYC is a concierge app that is built for tourists by New Yorkers. Users can browse a curated list of the best restaurants and sites according to locals. They also have the option to create an account, save their favorites to a personal list and rate destinations.
 
 ## Installation Instructions
 Type the following into the command line in the project's root folder:
@@ -21,7 +21,7 @@ Type the following into the command line in the project's root folder:
 
 Type the following inside the client folder:
 
-```npm i```
+```npm i axios react-router-dom```
 
 ## Technologies Used
 
@@ -36,19 +36,19 @@ React
 <br>Nodemon
 <br>Morgan
 <br>react-router-dom
-<br>axios 
+<br>axios
 
 ## API Description
 
 We'll be building out a unique, RESTful API using Postgres, Sequelize and Express.
 
-The API will include four models - restaurants, sites, users and user_favorites.
+The API will include four models - destinations, users, user_favorites and ratings.
 
-The restaurants model and sites model will each hold at least 15 unique restaurants/sites with the following data for each: name, borough, address, website, description and latitude/longitude coordinates.
+The destinations model will hold at least 30 unique restaurants/sites with the following data for each: name, borough, address, website, description, type (food or fun) and latitude/longitude coordinates.
 
-The users model will hold all users who sign up for an account; data included will be a username (which will be their email address), first name, last name and a password_digest.
+The users model will hold all users who sign up for an account; data included will be a username (which will be their email address), nickname and a password_digest.
 
-User_favorites will connect each user with the locations they've added to their favorites.
+User_favorites will connect each user with the locations they've added to their favorites and the ratings model will have a column for ratings 1 through 5.
 
 ## User Stories
 
@@ -58,6 +58,9 @@ Why?
 
 User 1:
 Individual comes to New York on vacation looking for things to do. They open the app to browse, decide they like what they see - create an account and make a list of favorites that they want to check out.
+
+User 2:
+Local wants to find new places to check out, browses through the site and creates an account to save their list. They rate places they've been to and update ratings for places they revisit.
 
 ## MVP (Minimum Viable Product)
 
