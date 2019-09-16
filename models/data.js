@@ -8,7 +8,7 @@ const destinations = [
     latitude: 40.7236056,
     longitude: -73.9906031,
     image_url: "https://sfo2.digitaloceanspaces.com/couchsessions-api/2019/06/3726010511_07c823fd60-449x337.jpg",
-    type: "food"
+    type: "bites"
   },
   {
     name: "Death & Co",
@@ -19,7 +19,7 @@ const destinations = [
     latitude: 40.72592,
     longitude: -73.9868392,
     image_url: "https://d37219swed47g7.cloudfront.net/media/reviews/death-co/banners/Death-Co_0.jpg",
-    type: "food"
+    type: "bites"
   },
   {
     name: "The Grill",
@@ -30,7 +30,7 @@ const destinations = [
     latitude: 40.7583177,,
     longitude: -73.9740621,
     image_url: "https://lh3.googleusercontent.com/-wSdVqdHaPgyDu-ZCIIfA_HJFLRnyaB1k-mCdiuHRm8vhepFo8RNUdxVhTrtxUKtroNQc-aG_EkN0ufpuVF5ArjbxrDS5Q=s1600-e7-v1-rj",
-    type: "food"
+    type: "bites"
   },
   {
     name: "Corner Bistro",
@@ -41,7 +41,7 @@ const destinations = [
     latitude: 40.7379852,
     longitude: -74.0059257,
     image_url: "https://pixel.nymag.com/imgs/listings/restaurants/corner-bistro/corner-bistro-01.w600.h315.2x.jpg",
-    type: "food"
+    type: "bites"
   },
   {
     name: "Minca",
@@ -52,7 +52,7 @@ const destinations = [
     latitude: 40.723998,
     longitude: -73.9851431,
     image_url: "https://assets3.thrillist.com/v1/image/1675480/size/tmg-article_default_mobile.jpg",
-    type: "food"
+    type: "bites"
   },
   {
     name : "Westlight",
@@ -63,7 +63,7 @@ const destinations = [
     address : "111 N. 12TH ST, BROOKLYN, NY 11249 22ND FLOOR",
     latitude : 40.724270,
     longitude : -73.957610,
-    type: "food"
+    type: "bites"
   },
   {
     name : "Peter Lugar Steak House",
@@ -74,7 +74,7 @@ const destinations = [
     address : "178 Broadway, Brooklyn, NY 11211",
     latitude : 40.709751,
     longitude : -73.962593,
-    type: "food"
+    type: "bites"
   },
   {
     name : "Raku",
@@ -85,7 +85,7 @@ const destinations = [
     address : "48 Macdougal St, New York, NY 10012",
     latitude : 40.727240,
     longitude : -74.002520,
-    type: "food"
+    type: "bites"
   },
   {
     name : "Sushi Zo",
@@ -96,7 +96,7 @@ const destinations = [
     address : "88 W 3rd St New York, NY 10012",
     latitude : 40.729780,
     longitude : -73.999250,
-    type: "food"
+    type: "bites"
   },
   {
     name : "Attaboy",
@@ -107,7 +107,7 @@ const destinations = [
     address : "134 Eldridge St., New York, NY, 10002",
     latitude : 40.718860,
     longitude : -73.991330,
-    type: "food"
+    type: "bites"
   },
    {
     name: "Tony's di Napoli",
@@ -118,7 +118,7 @@ const destinations = [
     latitude: 40.756512,
     longitude: -73.985382,
     image_url: "https://resizer.otstatic.com/v2/photos/huge/25774496.jpg",
-    type: "food"
+    type: "bites"
   },
   {
     name: "BlueBird London",
@@ -129,7 +129,7 @@ const destinations = [
     latitude: 40.768429,
     longitude: -73.983070,
     image_url: "https://cdn.vox-cdn.com/thumbor/Ug1g4W9b7ZTR3J02sKdGaDMjbC8=/0x0:5760x3840/1200x0/filters:focal(0x0:5760x3840):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/12922207/Bluebird_28.jpg",
-    type: "food"
+    type: "bites"
   },
   {
     name: "Peking Duck House",
@@ -140,7 +140,7 @@ const destinations = [
     latitude: 40.714650,
     longitude: -73.998540,
     image_url: "https://media-cdn.tripadvisor.com/media/photo-s/07/d7/d2/b2/peking-duck-house.jpg",
-    type: "food"
+    type: "bites"
   },
   {
     name: "Wo Hop",
@@ -151,7 +151,7 @@ const destinations = [
     latitude: 40.714260,
     longitude: -73.999008,
     image_url: "https://i.pinimg.com/originals/45/53/0d/45530de7200eab8fa1e19643a331320b.png",
-    type: "food"
+    type: "bites"
   },
   {
     name: "Down the Hatch",
@@ -162,7 +162,7 @@ const destinations = [
     latitude: 40.732470,
     longitude: -74.001570,
     image_url: "https://media.timeout.com/images/103161186/630/472/image.jpg",
-    type: "food"
+    type: "bites"
   },
   {
     name : "Greenwood Cemetery",
@@ -173,7 +173,7 @@ const destinations = [
     latitude: 40.6580779,
     longitude: -73.9970434,
     image_url: "https://irishamerica.com/wp-content/uploads/2013/01/Green-Wood_Cemetery-Lake.jpg",
-    type: "fun"
+    type: "sites"
   },
   {
     name: "Coney Island",
@@ -184,7 +184,7 @@ const destinations = [
     latitude: 40.5753293,
     longitude: -73.9819771,
     image_url: "https://assets3.thrillist.com/v1/image/2828293/size/gn-gift_guide_variable_c.jpg",
-    type: "fun"
+    type: "sites"
   },
   {
     name: "Rubin Museum of Art",
@@ -195,7 +195,7 @@ const destinations = [
     latitude: 40.7401773,
     longitude: -74.0000082,
     image_url: "https://coleav.com/wp-content/uploads/2016/08/Rubin-museum-Exterior-NYC.jpg",
-    type: "fun"
+    type: "sites"
   },
   {
     name: "The Met Cloisters",
@@ -206,7 +206,7 @@ const destinations = [
     latitude: 40.8648628,
     longitude: -73.9339215,
     image_url: "https://secretnyc.co/wp-content/uploads/2019/02/cloisters.jpg",
-    type: "fun"
+    type: "sites"
   },
   {
     name: "Blue Note Jazz Club",
@@ -217,7 +217,7 @@ const destinations = [
     latitude: 40.7309083,
     longitude: -74.0028498,
     image_url: "https://i.pinimg.com/originals/e7/c9/b9/e7c9b935700d409a2999a587b44e28d9.jpg",
-    type: "fun"
+    type: "sites"
   },
   {
     name:"Washington Square Park",
@@ -228,7 +228,7 @@ const destinations = [
     address:"Washington Square Park is the heart of Greenwich Village – located at the base of Fifth Avenue between MacDougal Street and University Place.",
     latitude: 40.730900,
     longitude: -73.996460,
-    type: "fun"
+    type: "sites"
   },
   {
     name:"DUMBO",
@@ -239,7 +239,7 @@ const destinations = [
     address:"New York, NY 11201",
     latitude: 40.692990,
     longitude: -73.990770,
-    type: "fun"
+    type: "sites"
   },
   {
     name:"The High Line",
@@ -250,7 +250,7 @@ const destinations = [
     address:"New York, NY 10011",
     latitude: 40.748690,
     longitude: -74.007690,
-    type: "fun"
+    type: "sites"
   },
   {
     name:"The Vessel",
@@ -261,7 +261,7 @@ const destinations = [
     address:"The Shops and Restaurants at Hudson Yards, New York, NY 10001",
     latitude: 40.753685,
     longitude: -73.999161,
-    type: "fun"
+    type: "sites"
   },
   {
     name:"St. Marks Place",
@@ -272,7 +272,7 @@ const destinations = [
     address:"8th Street from Ave A to Third Ave, East Village, New York, NY 10011, 10003, 10009",
     latitude: 40.728590,
     longitude: -73.987650,
-    type: "fun"
+    type: "sites"
   },
   {
     name:"Empire State Building",
@@ -283,7 +283,7 @@ const destinations = [
     address:"20 W 34th St, New York, NY 10001",
     latitude: 40.754910,
     longitude: -73.994100,
-    type: "fun"
+    type: "sites"
   },
   {
     name: "Brooklyn Bridge",
@@ -294,7 +294,7 @@ const destinations = [
     latitude: 40.7061,
     longitude: -73.9969,
     image_url: "https://upload.wikimedia.org/wikipedia/commons/f/f0/Brooklyn_Bridge_Postdlf.jpg",
-    type: "fun"
+    type: "sites"
   },
   {
     name: "Freedom Tower",
@@ -305,7 +305,7 @@ const destinations = [
     latitude: 40.7127,
     longitude: -74.0134,
     image_url: "https://imagez.tmz.com/image/4b/o/2017/06/14/4b90f50f43f55a1c8356359673af4b2d_md.jpg",
-    type: "fun"
+    type: "sites"
   },
   {
     name: "Rockefeller Center",
@@ -316,7 +316,7 @@ const destinations = [
     latitude: 40.7587,
     longitude: -73.9787,
     image_url: "https://cdn.getyourguide.com/img/tour_img-1907147-146.jpg",
-    type: "fun"
+    type: "sites"
   },
   {
     name: "Central Park Zoo",
@@ -327,7 +327,7 @@ const destinations = [
     latitude: 40.7678,
     longitude: -73.9718,
     image_url: "http://assets.centralparknyc.org/images/things-to-see-and-do/zoo-l.jpg",
-    type: "fun"
+    type: "sites"
   },
   {
     name: "Times Square",
@@ -338,7 +338,7 @@ const destinations = [
     latitude:40.7590,
     longitude: -73.9845,
     image_url: "https://upload.wikimedia.org/wikipedia/commons/4/47/New_york_times_square-terabass.jpg",
-    type: "fun"
+    type: "sites"
   }
 ];
 
