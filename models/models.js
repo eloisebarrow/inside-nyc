@@ -26,8 +26,18 @@ Destination.init({
 
 class User extends Sequelize.Model {}
 User.init({
-  username: Sequelize.STRING,
-  nickname: Sequelize.STRING,
+  username: {
+    type: Sequelize.STRING,
+    unique: true,
+    allowNull: false,
+    validate: {
+      isEmail: true
+    }
+  },
+  nickname: {
+    type: Sequelize.STRING,
+    allowNull: false
+  },
   password_digest: Sequelize.STRING
 }, {
   sequelize: db,
