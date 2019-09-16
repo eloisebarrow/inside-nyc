@@ -45,8 +45,8 @@ Rating.init({
 User.hasMany(Destination, { through: 'user_favorites' });
 Destination.belongsTo(User, { through: 'user_favorites' });
 
-Destination.belongsToMany(Rating, { through: 'destination_ratings' });
-Rating.belongsToMany(Destination, { through: 'rating_destinations' });
+User.hasMany(Rating);
+Destination.hasMany(Rating);
 
 module.exports = {
   db, Destination, Favorite, User, Rating
