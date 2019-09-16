@@ -16,7 +16,7 @@ favoritesController.get('/:id', async (req, res) => {
 favoritesController.get('/user/:user_id', async (req, res, next) => {
   try {
     const user = await User.findByPk(req.params.user_id);
-    const favorites = await user.getDesinations();
+    const favorites = await user.getDestinations();
     res.json({ favorites });
   } catch (e) {
     next(e);

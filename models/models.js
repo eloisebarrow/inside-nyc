@@ -53,7 +53,6 @@ Rating.init({
 });
 
 User.belongsToMany(Destination, { through: 'user_favorites' });
-Destination.belongsTo(User, { through: 'user_favorites' });
 
 User.hasMany(Rating);
 Destination.hasMany(Rating);
