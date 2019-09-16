@@ -6,9 +6,9 @@
   "scripts": {
     "start": "node server.js",
     "dev": "nodemon server.js",
-    "db:create": "dropdb --if-exists seenyc_db && createdb -e seenyc_db",
-    "db:reset": "node resetDb.js",
-    "db:seed": "node seed.js"
+    "db:create": "dropdb --if-exists -e seenyc_db && createdb -e seenyc_db",
+    "db:reset": "node models/resetDb.js",
+    "db:seed": "node models/seed.js"
   },
   "repository": {
     "type": "git",

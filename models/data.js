@@ -27,7 +27,7 @@ const destinations = [
     address: "99 East 52nd Street",
     website: "https://thegrillnewyork.com/",
     description: "Upscale dining - the pasta a la presse is la best.",
-    latitude: 40.7583177,,
+    latitude: 40.7583177,
     longitude: -73.9740621,
     image_url: "https://lh3.googleusercontent.com/-wSdVqdHaPgyDu-ZCIIfA_HJFLRnyaB1k-mCdiuHRm8vhepFo8RNUdxVhTrtxUKtroNQc-aG_EkN0ufpuVF5ArjbxrDS5Q=s1600-e7-v1-rj",
     type: "food"

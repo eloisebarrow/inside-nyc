@@ -15,8 +15,8 @@ Destination.init({
   address: Sequelize.STRING,
   website: Sequelize.STRING,
   description: Sequelize.STRING,
-  latitude: Sequelize.INTEGER,
-  longitude: Sequelize.INTEGER,
+  latitude: Sequelize.DECIMAL,
+  longitude: Sequelize.DECIMAL,
   image_url: Sequelize.STRING,
   type: Sequelize.STRING
 }, {
@@ -52,12 +52,12 @@ Rating.init({
   modelName: 'rating'
 });
 
-User.hasMany(Destination, { through: 'user_favorites' });
-Destination.belongsTo(User, { through: 'user_favorites' });
-
-User.hasMany(Rating);
-Destination.hasMany(Rating);
+// User.hasMany(Destination, { through: 'user_favorites' });
+// Destination.belongsTo(User, { through: 'user_favorites' });
+//
+// User.hasMany(Rating);
+// Destination.hasMany(Rating);
 
 module.exports = {
-  db, Destination, Favorite, User, Rating
+  db, Destination, User, Rating
 }
