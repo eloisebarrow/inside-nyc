@@ -1,8 +1,17 @@
 const { Router } = require('express');
-const { Destination } = require('../models/models');
+const { Destination, User } = require('../models/models');
 // const { restrict } = require('../services/auth')
 
 const favoritesController = Router();
+
+favoritesController.get('/', async (req, res) => {
+  res.send('Favorites route')
+});
+
+favoritesController.get('/:id', async (req, res) => {
+  const user = await User.findByPk(req.params.id)
+  res.json(user)
+});
 
 favoritesController.get('/user/:user_id', async (req, res, next) => {
   try {
