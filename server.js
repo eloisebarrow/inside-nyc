@@ -16,6 +16,7 @@ app.use(logger('dev'));
 
 app.use('/sites', sitesController);
 app.use('/bites', bitesController);
+app.use('/favorites', favoritesController);
 
 app.use((e, req, res, next) => {
   if (e) {

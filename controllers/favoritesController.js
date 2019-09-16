@@ -1,5 +1,5 @@
 const { Router } = require('express');
-const { Destination } = require('../models');
+const { Destination } = require('../models/models');
 // const { restrict } = require('../services/auth')
 
 const favoritesController = Router();
