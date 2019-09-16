@@ -52,11 +52,11 @@ Rating.init({
   modelName: 'rating'
 });
 
-// User.hasMany(Destination, { through: 'user_favorites' });
-// Destination.belongsTo(User, { through: 'user_favorites' });
-//
-// User.hasMany(Rating);
-// Destination.hasMany(Rating);
+User.belongsToMany(Destination, { through: 'user_favorites' });
+Destination.belongsTo(User, { through: 'user_favorites' });
+
+User.hasMany(Rating);
+Destination.hasMany(Rating);
 
 module.exports = {
   db, Destination, User, Rating
