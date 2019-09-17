@@ -22,29 +22,8 @@ body {
  flex-direction: column;
 }
 
-.sitesDiv {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(0,0,0,.5);
-  height: 30vh;
-  margin: 5%;
-}
-
-.bitesDiv {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(0,0,0,.5);
-  height: 30vh;
-  margin: 5%;
-}
-
 .footer {
   background-color: yellow;
-  position: fixed;
-  bottom: 0;
-  width: 100%
 }
 
 /*tablet*/
@@ -57,7 +36,7 @@ body {
 
   .main {
     display: grid;
-    
+
   }
 
 }
