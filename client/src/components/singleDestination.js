@@ -1,9 +1,9 @@
 import React from 'react';
 
-function SingleDestination() {
+function SingleDestination(props) {
   return (
     <div className="single-destination">
-      <h4>SINGLE DESTINATION</h4>
+      <h4>{props.data.name}</h4>
     </div>
   );
 }
