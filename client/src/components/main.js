@@ -14,18 +14,21 @@ function Main(props) {
           <Destinations
             title={'FAVORITES'}
             data={props.favorites}
+            favorites={props.favorites}
           />
         )}/>
         <Route path='/bites' render={() => (
           <Destinations
             title={'BITES'}
             data={props.bites}
+            favorites={props.favorites}
             />
           )}/>
         <Route exact path='/sites' render={() => (
           <Destinations
             title={'SITES'}
             data={props.sites}
+            favorites={props.favorites}
           />
         )}/>
         <Route path='/' render={(props) => (
