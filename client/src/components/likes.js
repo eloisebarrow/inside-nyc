@@ -4,7 +4,7 @@ function Likes() {
   return (
     <div>
       Likes
-    </div>;
+    </div>
   )
 }
 

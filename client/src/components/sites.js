@@ -2,9 +2,9 @@ import React from "react";
 
 function Sites() {
   return (
-    <div>
+    <div className="sitesDiv">
       Sites
-    </div>;
+    </div>
   )
 }
 

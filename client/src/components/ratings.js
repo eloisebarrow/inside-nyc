@@ -4,7 +4,7 @@ function Ratings() {
   return (
     <div>
       Ratings
-    </div>;
+    </div>
   )
 }
 

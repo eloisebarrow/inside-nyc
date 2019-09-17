@@ -2,9 +2,9 @@ import React from "react";
 
 function Bites() {
   return (
-    <div>
+    <div className="bitesDiv">
       Bites
-    </div>;
+    </div>
   )
 }
 

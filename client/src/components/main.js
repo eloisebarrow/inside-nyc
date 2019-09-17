@@ -1,21 +1,15 @@
 import React from 'react';
 // import Login from './login';
 // import Home from './home';
-import Destinations from './destinations';
+import Sites from './sites';
+import Bites from './bites';
 
 function Main(props) {
   return (
     <div className="main">
-      <h1>Main</h1>
-      <Destinations
-        sites={props.sites}
-      />
-      <Destinations
-        bites={props.bites}
-      />
-      <Destinations
-        favorites={props.favorites}
-      />
+      <h1>seeNYC Main</h1>
+      <Sites />
+      <Bites />
     </div>
   );
 }
