@@ -9,6 +9,7 @@ html, body {
 
 body {
   background-color: rgb(52, 131, 235);
+  overflow: hidden;
 }
 
 .header {
@@ -32,7 +33,7 @@ body {
 }
 
 .footer {
-  position: sticky;
+  position: static;
   bottom: 0;
   height: 5vh;
   background-color: yellow;
