@@ -49,7 +49,8 @@ Rating.init({
   rating: Sequelize.INTEGER
 }, {
   sequelize: db,
-  modelName: 'rating'
+  modelName: 'rating',
+  timestamps: false
 });
 
 User.belongsToMany(Destination, { through: 'user_favorites' });
