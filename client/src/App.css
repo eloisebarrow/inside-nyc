@@ -36,6 +36,12 @@ body {
   flex-direction: column;
 }
 
+
+
+.single-destination {
+  background: rgba(0, 0, 0, 0.5);
+}
+
 .footer {
   position: static;
   bottom: 0;
@@ -58,7 +64,10 @@ body {
   .listContainer {
     display: grid;
     grid-gap: 10px;
-    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    text-align: center;
+    margin: 5%;
+
   }
 
 }
