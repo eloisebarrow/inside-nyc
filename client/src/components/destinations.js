@@ -2,11 +2,11 @@ import React from 'react';
 import SingleDestination from './singleDestination';
 
 function Destinations(props) {
-  debugger;
   const destinations = props.data.map((destination, id) => {
     return <SingleDestination
       key={id}
       data={destination}
+      favorites={props.favorites}
     />
   });
 
