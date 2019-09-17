@@ -4,18 +4,9 @@ const { restrict } = require('../auth')
 
 const favoritesController = Router();
 
-favoritesController.get('/', async (req, res) => {
-  res.send('Favorites route')
-});
-
-favoritesController.get('/:id', async (req, res) => {
-  const user = await User.findByPk(req.params.id)
-  res.json(user)
-});
-
-favoritesController.get('/user/:user_id', restrict, async (req, res, next) => {
+favoritesController.get('/', restrict, async (req, res, next) => {
   try {
-    const user = await User.findByPk(req.params.user_id);
+    const user = await User.findByPk(res.locals.user.id);
     const favorites = await user.getDestinations();
     res.json(favorites);
   } catch (e) {
