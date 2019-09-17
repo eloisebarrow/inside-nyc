@@ -33,11 +33,13 @@ function Main(props) {
         <Route exact path='/login' render={() => (
           <Login
             title={'login'}
+            {...props}
           />
         )}/>
         <Route exact path='/register' render={() => (
           <Login
             title={'register'}
+            {...props}
           />
         )}/>
         <Route path='/' render={() => (

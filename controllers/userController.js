@@ -13,9 +13,9 @@ const buildAuthResponse = (user) => {
 
 userController.post('/register', async (req, res, next) => {
   try {
-    const { username, nickname, password } = req.body;
+    const { email, nickname, password } = req.body;
     const password_digest = await hashPassword(password);
-    const user = await User.create({ username, nickname, password_digest });
+    const user = await User.create({ email, nickname, password_digest });
     const responseData = buildAuthResponse(user);
     res.json(responseData);
   } catch (e) {
@@ -25,9 +25,9 @@ userController.post('/register', async (req, res, next) => {
 
 userController.post('/login', async (req, res, next) => {
   try {
-    const { username, password } = req.body;
+    const { email, password } = req.body;
     const user = await User.findOne({
-      where: { username },
+      where: { email },
     });
     const passwordIsCorrect = await checkPassword(password, user.password_digest)
     if (passwordIsCorrect) {
@@ -39,6 +39,10 @@ userController.post('/login', async (req, res, next) => {
   } catch (e) {
     next(e);
   }
+})
+
+userController.post('/verify', async (req, res, next) => {
+
 })
 
 module.exports = userController;

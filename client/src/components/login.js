@@ -3,9 +3,10 @@ import Form from "./form.js"
 
 function Login(props) {
   return (
-    <div>
+    <div style={{padding: '100px'}}>
       <Form
         title={props.title}
+        {...props}
       />
     </div>
   )
