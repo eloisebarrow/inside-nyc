@@ -17,23 +17,12 @@ export const showFavorites = async (userId) => {
   return favorites.data;
 }
 
-// export const showSites = (favoriteData) => {
-//   // Make a post request using axios
-//   // to create a favorite and return .data
-//   const resp = await axios.post(`${BASE_URL}/destinations/:rating_id`, favoriteData);
-//   return resp.data;
+// export const showRatings = (ratingId, ratingData) => {
+//   const rating = await axios.post(`${BASE_URL}/destinations/${ratingId}`, ratingData);
+//   return rating.data;
 // }
 //
-// export const showFavorites = (ratingData) => {
-//   // Make a post request using axios
-//   // to create a rating and return .data
-//   const resp = await axios.post(`${BASE_URL}/destinations/:rating_id`, ratingData);
-//   return resp.data;
-// }
-//
-// export const removeFavorite = (tweetId) => {
-//   // Make a delete request using axios
-//   // and return the response
-//   const resp = await axios.get(`${BASE_URL}/tweets/${tweetId}`);
-//   return resp;
+// export const removeFavorite = (userId) => {
+//   const favorite = await axios.get(`${BASE_URL}/favorites/user/${userId}`);
+//   return favorite;
 // }
