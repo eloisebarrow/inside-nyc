@@ -3,7 +3,6 @@ import './App.css';
 import Main from './components/main';
 import Header from './components/header';
 import Footer from './components/footer';
-import { Route } from 'react-router-dom';
 
 import { showBites, showSites, showFavorites } from './services/api-helper';
 

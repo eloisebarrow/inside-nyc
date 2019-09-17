@@ -4,7 +4,7 @@ const Form = props => {
   return (
     <>
       <h2>{props.title}</h2>
-      <form onSubmit={e => {
+      <form onSubmit={(e) => {
         if (props.title === "Register"){
           props.registerUser(e)
         } else {
@@ -12,7 +12,7 @@ const Form = props => {
         }
       }}>
         <label htmlFor="email">Email: </label>
-        <input onChange={e => props.handleChange(e)}
+        <input onChange={(e) => props.handleChange(e)}
           id="email"
           type="text"
           name="email"
@@ -20,13 +20,15 @@ const Form = props => {
         />
         {
           props.title === "Register" && (
+            <>
             <label htmlFor="password">Nickname: </label>
-            <input onChange={e => props.handleChange(e)}
+            <input onChange={(e) => props.handleChange(e)}
               id="nickname"
               type="text"
               name="nickname"
               value={props.form.password}
             />
+          </>
           )
         }
         <label htmlFor="password">Password: </label>

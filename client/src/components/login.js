@@ -1,9 +1,12 @@
 import React from "react";
+import Form from "./form.js"
 
-function Login() {
+function Login(props) {
   return (
     <div>
-      Login
+      <Form
+        title={props.title}
+      />
     </div>
   )
 }
