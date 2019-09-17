@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
-import Main from './components/main'
+import Main from './components/main';
+import { Route } from 'react-router-dom';
 import { showBites, showSites, showFavorites } from './services/api-helper';
 
 
@@ -18,6 +19,7 @@ class App extends React.Component {
 
   getSites = async () => {
     const sites = await showSites();
+
     this.setState({ sites })
   }
 
@@ -38,11 +40,13 @@ class App extends React.Component {
     console.log(this.state.favorites);
     return (
       <div className="App">
-        <Main
-        sites={this.state.sites}
-        bites={this.state.bites}
-        favorites={this.state.favorites}
-        />
+        { /* <Route exact path='/' render={(props) => ( */ }
+          <Main
+          sites={this.state.sites}
+          bites={this.state.bites}
+          favorites={this.state.favorites}
+          />
+        { /* )}/> */ }
       </div>
     );
   }
