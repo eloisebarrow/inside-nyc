@@ -4,7 +4,7 @@ import SingleDestination from './SingleDestination';
 function Destinations() {
   return (
     <div className="destinations">
-
+Desination
     </div>
   );
 }

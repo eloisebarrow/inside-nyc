@@ -6,7 +6,7 @@ import Destinations from './destinations';
 function Main() {
   return (
     <div className="main">
-
+      Main
     </div>
   );
 }
