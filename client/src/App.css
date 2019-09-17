@@ -24,12 +24,16 @@ body {
   height: 15vh;
 }
 
+.header h1 {
+  margin: 10px;
+}
+
 .main {
+  margin-top: 15vh;
   height: 80vh;
   overflow: scroll;
   display: flex;
   flex-direction: column;
-  margin-top: 15vh;
 }
 
 .footer {
@@ -47,9 +51,14 @@ body {
     flex-direction: row;
   }
 
-  .main {
-    display: grid;
+  .header h1 {
+    margin: 21px;
+  }
 
+  .listContainer {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
   }
 
 }
