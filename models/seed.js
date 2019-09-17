@@ -15,6 +15,7 @@ const genUser = async () => {
     const testUser = await User.create({
       username: 'test@gmail.com',
       nickname: 'user1',
+
     });
   } catch(e) {
     console.log(e.message)
@@ -26,7 +27,7 @@ const main = async () => {
     where: {},
   });
   await genDestinations();
-  await genUser();
+  // await genUser();
   process.exit();
 };
 

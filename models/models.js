@@ -38,7 +38,10 @@ User.init({
     type: Sequelize.STRING,
     allowNull: false
   },
-  password_digest: Sequelize.STRING
+  password_digest: {
+    type: Sequelize.STRING,
+    allowNull: false
+  }
 }, {
   sequelize: db,
   modelName: 'user'

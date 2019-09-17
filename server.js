@@ -6,6 +6,7 @@ const logger = require('morgan');
 const sitesController = require('./controllers/sitesController');
 const bitesController = require('./controllers/bitesController');
 const favoritesController = require('./controllers/favoritesController');
+const userController = require('./controllers/userController');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -17,6 +18,7 @@ app.use(logger('dev'));
 app.use('/sites', sitesController);
 app.use('/bites', bitesController);
 app.use('/favorites', favoritesController);
+app.use('/auth', userController);
 
 app.use((e, req, res, next) => {
   if (e) {
