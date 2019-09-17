@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Main from './components/main'
-import { showBites, showSites, showFavorites } from './services/api-helper.js';
+import { showBites, showSites, showFavorites } from './services/api-helper';
 
 
 class App extends React.Component {
@@ -21,21 +21,28 @@ class App extends React.Component {
     this.setState({ sites })
   }
 
-  getFavorites = async () => {
-    const favorites = await showFavorites();
+  getFavorites = async (userId) => {
+    const favorites = await showFavorites(userId);
     this.setState({ favorites })
   }
 
   componentDidMount() {
     this.getBites();
     this.getSites();
-    this.getFavorites();
+    this.getFavorites(1);
   }
 
   render() {
+    console.log(this.state.sites);
+    console.log(this.state.bites);
+    console.log(this.state.favorites);
     return (
       <div className="App">
-        <Main />
+        <Main
+        sites={this.state.sites}
+        bites={this.state.bites}
+        favorites={this.state.favorites}
+        />
       </div>
     );
   }

@@ -3,24 +3,18 @@ const axios = require('axios');
 const BASE_URL = 'http://localhost:3001';
 
 export const showBites = async () => {
-  // Make a get request using axios
-  // to get all destinations and return .data
   const bites = await axios.get(`${BASE_URL}/bites`);
   return bites.data;
 }
 
 export const showSites = async () => {
-  // Make a get request using axios
-  // to get all destinations and return .data
   const sites = await axios.get(`${BASE_URL}/sites`);
   return sites.data;
 }
 
 export const showFavorites = async (userId) => {
-  // Make a get request using axios
-  // to get all destinations and return .data
-  const faves = await axios.get(`${BASE_URL}/user/${userId}`);
-  return faves.data;
+  const favorites = await axios.get(`${BASE_URL}/favorites/user/${userId}`);
+  return favorites.data;
 }
 
 // export const showSites = (favoriteData) => {

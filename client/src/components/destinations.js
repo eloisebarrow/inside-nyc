@@ -1,10 +1,10 @@
 import React from 'react';
-import SingleDestination from './SingleDestination';
+// import SingleDestination from './SingleDestination';
 
-function Destinations() {
+function Destinations(props) {
   return (
     <div className="destinations">
-Desination
+      <h1>Destinations</h1>
     </div>
   );
 }
