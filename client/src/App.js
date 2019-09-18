@@ -17,7 +17,8 @@ class App extends React.Component {
       email: '',
       nickname: '',
       password: ''
-    }
+    },
+    errorHandle: ''
   }
 
   handleSignOut = () => {
