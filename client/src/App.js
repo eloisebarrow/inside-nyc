@@ -25,11 +25,20 @@ class App extends React.Component {
       nickname: '',
       password: ''
     },
-    error: ''
+    error: '',
+    details: null
+  }
+
+  handleDetails = (destinationId) => {
+    console.log(destinationId);
+    const destination = [...this.state.bites, ...this.state.sites].find(destination =>
+      destination.id === destinationId);
+    this.setState({
+      details: destination
+    });
   }
 
   handleLike = (destinationId) => {
-    console.log(destinationId);
     if (this.state.favorites.find((favorite) => favorite.id === destinationId)) {
       deleteFavorite(destinationId);
       this.setState(prevState => ({
@@ -156,6 +165,7 @@ class App extends React.Component {
           handleRemoveError={this.handleRemoveError}
         />
         <Main
+          details={this.state.details}
           sites={this.state.sites}
           bites={this.state.bites}
           favorites={this.state.favorites}
@@ -166,6 +176,7 @@ class App extends React.Component {
           handleRegister={this.handleRegister}
           handleChange={this.handleChange}
           handleLike={this.handleLike}
+          handleDetails={this.handleDetails}
           handleRemoveError={this.handleRemoveError}
         />
         <Footer />
