@@ -1,6 +1,6 @@
 const { Router } = require('express');
 const { User } = require('../models/models');
-const { hashPassword, genToken, checkPassword } = require('../auth')
+const { hashPassword, genToken, checkPassword, restrict } = require('../auth')
 
 const userController = Router();
 
@@ -41,8 +41,13 @@ userController.post('/login', async (req, res, next) => {
   }
 })
 
-userController.post('/verify', async (req, res, next) => {
-
+userController.get('/verify', restrict, async (req, res, next) => {
+  try {
+    const user = await User.findByPk(res.locals.user.id);
+    res.json(user)
+  } catch (e) {
+    next(e);
+  }
 })
 
 module.exports = userController;
