@@ -1,9 +1,14 @@
 import React from 'react';
-import Like from './like'
+import Like from './like';
+import './singleDestination.css';
 
 function SingleDestination(props) {
+const imageStyles = {
+  backgroundSize: 'cover'
+}
   return (
-    <div className="single-destination">
+    <div style={imageStyles} className="single-destination">
+      <img src={props.image}/>
       <h4>{props.data.name}</h4>
       {
         <Like

@@ -3,6 +3,7 @@ import SingleDestination from './singleDestination';
 import { Link } from "react-router-dom"
 
 function Destinations(props) {
+  console.log(props.data);
   const destinations = props.data.map((destination, id) => {
     return <Link
       key={id}
@@ -13,6 +14,7 @@ function Destinations(props) {
         data={destination}
         favorites={props.favorites}
         handleLike={props.handleLike}
+        image={destination.image_url}
       />
     </Link>
   });

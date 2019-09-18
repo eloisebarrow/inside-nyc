@@ -8,8 +8,12 @@ html, body {
 }
 
 body {
-  background-color: rgb(52, 131, 235);
+  background-color: rgb(255, 255, 255);
   overflow: hidden;
+}
+
+a {
+  text-decoration: none;
 }
 
 .header {
@@ -17,7 +21,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background-color: yellow;
+  /* background-color: yellow; */
   position: fixed;
   top: 0;
   width: 100%;
@@ -36,17 +40,11 @@ body {
   flex-direction: column;
 }
 
-
-
-.single-destination {
-  background: rgba(0, 0, 0, 0.5);
-}
-
 .footer {
   position: static;
   bottom: 0;
   height: 5vh;
-  background-color: yellow;
+  border-top: 1px solid black;
 }
 
 /*tablet*/

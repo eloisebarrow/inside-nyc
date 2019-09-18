@@ -1,11 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
+import './header.css';
 
 function Header(props) {
   return (
     <div className="header">
       <Link to="/">
-        <h1>seeNYC Header</h1>
+        <h1>seeNYC</h1>
       </Link>
       <div>
       {props.currentUser ? (
