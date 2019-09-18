@@ -4,7 +4,7 @@ import Main from './components/main';
 import Header from './components/header';
 import Footer from './components/footer';
 
-import { showBites, showSites, showFavorites, registerUser, loginUser } from './services/api-helper';
+import { showBites, showSites, showFavorites, registerUser, loginUser, verifyUser } from './services/api-helper';
 
 
 class App extends React.Component {
@@ -59,6 +59,7 @@ class App extends React.Component {
         password: ''
       }
      });
+    this.getFavorites(currentUser.id)
   }
 
   getBites = async () => {
@@ -80,13 +81,14 @@ class App extends React.Component {
   componentDidMount() {
     this.getBites();
     this.getSites();
-    this.getFavorites(1);
+    const currentUser = verifyUser();
+    if (currentUser) {
+      this.setState({ currentUser });
+      this.getFavorites(currentUser.id);
+    }
   }
 
   render() {
-    // console.log(this.state.sites);
-    // console.log(this.state.bites);
-    // console.log(this.state.favorites);
     return (
       <div className="App">
         <Header />
