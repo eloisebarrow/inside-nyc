@@ -43,7 +43,7 @@ const Form = props => {
         <button type="submit">Submit</button>
         {
           props.title === "login" && (
-            <Link to="/register">Register</Link>
+            <Link to="/register"><button>Register</button></Link>
           )
         }
       </form>
