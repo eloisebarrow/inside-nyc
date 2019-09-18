@@ -1,9 +1,13 @@
 import React from "react";
+import Form from "./form.js"
 
-function Login() {
+function Login(props) {
   return (
-    <div>
-      Login
+    <div style={{padding: '100px'}}>
+      <Form
+        title={props.title}
+        {...props}
+      />
     </div>
   )
 }

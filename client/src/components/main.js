@@ -1,8 +1,7 @@
 import React from 'react';
-// import Login from './login';
-// import Home from './home';
-import Destinations from './destinations';
+import Login from './login';
 import Home from './home';
+import Destinations from './destinations';
 import { Route, Switch } from 'react-router-dom';
 
 function Main(props) {
@@ -31,8 +30,21 @@ function Main(props) {
             favorites={props.favorites}
           />
         )}/>
-        <Route path='/' render={(props) => (
+        <Route exact path='/login' render={() => (
+          <Login
+            title={'login'}
+            {...props}
+          />
+        )}/>
+        <Route exact path='/register' render={() => (
+          <Login
+            title={'register'}
+            {...props}
+          />
+        )}/>
+        <Route path='/' render={() => (
           <Home
+            title={'HOME'}
           />
         )}/>
       </Switch>

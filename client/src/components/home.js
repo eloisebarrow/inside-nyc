@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from 'react-router-dom'
 
-function Home() {
+function Home(props) {
   return (
     <div>
       <Link to="/bites">
@@ -13,7 +13,6 @@ function Home() {
       <Link to='/favorites/user/:user_id'>
         <h3>FAVORITES</h3>
       </Link>
-
     </div>
   )
 }

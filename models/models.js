@@ -26,7 +26,7 @@ Destination.init({
 
 class User extends Sequelize.Model {}
 User.init({
-  username: {
+  email: {
     type: Sequelize.STRING,
     unique: true,
     allowNull: false,
