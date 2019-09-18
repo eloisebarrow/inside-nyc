@@ -7,11 +7,12 @@ function Header(props) {
       <Link to="/">
         <h1>seeNYC Header</h1>
       </Link>
-      <div>     
-        <Link to="/login">
-          <button>Sign In</button>
-        </Link>
+      <div>
+      {props.currentUser ? (
         <button onClick={props.handleSignOut}>Sign Out</button>
+      ) : (
+        <Link to="/login"><button>Sign In</button></Link>
+      )}
       </div>
     </div>
   )

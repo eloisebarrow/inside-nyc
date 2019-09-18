@@ -5,7 +5,6 @@ import Destinations from './destinations';
 import { Route, Switch } from 'react-router-dom';
 
 function Main(props) {
-  console.log('main',props.bites);
   return (
     <div className="main">
       <Switch>

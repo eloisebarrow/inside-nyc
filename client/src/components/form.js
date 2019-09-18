@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 
 const Form = props => {
   return (
@@ -8,9 +8,11 @@ const Form = props => {
       <form onSubmit={(e) => {
         e.preventDefault()
         if (props.title === "register"){
-          props.handleRegister()
+          props.handleRegister();
+          props.history.push('/home')
         } else {
-          props.handleLogin()
+          props.handleLogin();
+          props.history.push('/home')
         }
       }}>
         <label htmlFor="email">Email: </label>
@@ -43,7 +45,7 @@ const Form = props => {
         <button type="submit">Submit</button>
         {
           props.title === "login" && (
-            <Link to="/register">Register</Link>
+            <Link to="/register"><button>Register</button></Link>
           )
         }
       </form>
@@ -51,4 +53,4 @@ const Form = props => {
   )
 }
 
-export default Form;
+export default withRouter(Form);
