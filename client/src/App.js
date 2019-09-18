@@ -122,7 +122,12 @@ class App extends React.Component {
        this.getFavorites(currentUser.id)
        this.props.history.push('/home')
     }
+  }
 
+  handleRemoveError = () => {
+    this.setState({
+      error: ''
+    })
   }
 
   getBites = async () => {
@@ -157,6 +162,7 @@ class App extends React.Component {
         <Header
           currentUser={this.state.currentUser}
           handleSignOut={this.handleSignOut}
+          handleRemoveError={this.handleRemoveError}
         />
         <Main
           details={this.state.details}
@@ -171,6 +177,7 @@ class App extends React.Component {
           handleChange={this.handleChange}
           handleLike={this.handleLike}
           handleDetails={this.handleDetails}
+          handleRemoveError={this.handleRemoveError}
         />
         <Footer />
       </div>
