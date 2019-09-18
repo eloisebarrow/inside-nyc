@@ -35,6 +35,17 @@ export const registerUser = async (registerData) => {
   return resp.data.user
 }
 
+export const verifyUser = async () => {
+  const token = localStorage.getItem('authToken');
+  if (token) {
+    api.defaults.headers.common.authorization = `Bearer ${token}`;
+    const resp = await api.get('/auth/verify');
+    return resp.data
+  } else {
+    return false;
+  }
+}
+
 // export const showRatings = (ratingId, ratingData) => {
 //   const rating = await axios.post(`${BASE_URL}/destinations/${ratingId}`, ratingData);
 //   return rating.data;
