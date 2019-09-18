@@ -11,7 +11,7 @@ function Header(props) {
       {props.currentUser ? (
         <Link to="/login"><button onClick={props.handleSignOut}>Sign Out</button></Link>
       ) : (
-        <Link to="/login"><button>Sign In</button></Link>
+        <Link to="/login"><button onClick={props.handleRemoveError}>Sign In</button></Link>
       )}
       </div>
     </div>

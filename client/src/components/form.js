@@ -44,7 +44,7 @@ const Form = props => {
         <button type="submit">Submit</button>
         {
           props.title === "login" && (
-            <Link to="/register"><button>Register</button></Link>
+            <Link to="/register"><button onClick={props.handleRemoveError}>Register</button></Link>
           )
         }
       </form>
