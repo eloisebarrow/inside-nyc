@@ -64,10 +64,10 @@ class App extends React.Component {
     this.setState({ favorites })
   }
 
-  componentDidMount() {
+  componentDidMount = async () => {
     this.getBites();
     this.getSites();
-    const currentUser = verifyUser();
+    const currentUser = await verifyUser();
     if (currentUser) {
       this.setState({ currentUser });
       this.getFavorites(currentUser.id);
@@ -77,15 +77,18 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <Header />
+        <Header
+          handleSignOut={this.handleSignOut}
+        />
         <Main
-        sites={this.state.sites}
-        bites={this.state.bites}
-        favorites={this.state.favorites}
-        handleLogin={this.handleLogin}
-        handleRegister={this.handleRegister}
-        handleChange={this.handleChange}
-        formData={this.state.formData}
+          sites={this.state.sites}
+          bites={this.state.bites}
+          favorites={this.state.favorites}
+          currentUser={this.state.currentUser}
+          handleLogin={this.handleLogin}
+          handleRegister={this.handleRegister}
+          handleChange={this.handleChange}
+          formData={this.state.formData}
         />
         <Footer />
       </div>

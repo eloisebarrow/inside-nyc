@@ -1,15 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom"
 
-function Header() {
+function Header(props) {
   return (
     <div className="header">
       <Link to="/">
         <h1>seeNYC Header</h1>
       </Link>
-      <div>
-        <button>Login In</button>
-        <button>Sign Up</button>
+      <div>     
+        <Link to="/login">
+          <button>Sign In</button>
+        </Link>
+        <button onClick={props.handleSignOut}>Sign Out</button>
       </div>
     </div>
   )

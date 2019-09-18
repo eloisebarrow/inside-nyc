@@ -45,6 +45,7 @@ function Main(props) {
         <Route path='/' render={() => (
           <Home
             title={'HOME'}
+            {...props}
           />
         )}/>
       </Switch>
