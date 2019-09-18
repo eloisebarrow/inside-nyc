@@ -11,7 +11,7 @@ export const showBites = async () => {
     const bites = await api.get(`/bites`);
     return bites.data;
   } catch (e) {
-    return e.message;
+    console.log(e.message);
   }
 }
 
@@ -20,7 +20,7 @@ export const showSites = async () => {
     const sites = await api.get(`/sites`);
     return sites.data;
   } catch (e) {
-    return e.message;
+    console.log(e.message);
   }
 }
 
@@ -29,7 +29,7 @@ export const showFavorites = async (userId) => {
     const favorites = await api.get(`/favorites`);
     return favorites.data;
   } catch (e) {
-    return e.message;
+    console.log(e.message);
   }
 }
 
@@ -40,7 +40,7 @@ export const loginUser = async (loginData) => {
     api.defaults.headers.common.authorization = `Bearer ${resp.data.token}`;
     return resp.data.user
   } catch (e) {
-    return e.message;
+    return { error: e.message };
   }
 }
 
@@ -51,7 +51,7 @@ export const registerUser = async (registerData) => {
     api.defaults.headers.common.authorization = `Bearer ${resp.data.token}`;
     return resp.data.user
   } catch (e) {
-    return e.message;
+    return { error: e.message };
   }
 }
 
@@ -66,7 +66,7 @@ export const verifyUser = async () => {
       return false;
     }
   } catch (e) {
-    return e.message;
+    console.log(e.message);
   }
 }
 
