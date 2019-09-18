@@ -34,17 +34,31 @@ class App extends React.Component {
         ...prevState.formData,
         [name]: value
       }
-    }))
+    }));
   }
 
   handleRegister = async () => {
     const currentUser = await registerUser(this.state.formData);
-    this.setState({ currentUser })
+    this.setState({
+      currentUser,
+      formData: {
+        email: '',
+        nickname: '',
+        password: ''
+      }
+     });
   }
 
   handleLogin = async () => {
     const currentUser = await loginUser(this.state.formData);
-    this.setState({ currentUser })
+    this.setState({
+      currentUser,
+      formData: {
+        email: '',
+        nickname: '',
+        password: ''
+      }
+     });
     this.getFavorites(currentUser.id)
   }
 
