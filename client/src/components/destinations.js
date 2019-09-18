@@ -5,6 +5,7 @@ import { Link } from "react-router-dom"
 function Destinations(props) {
   const destinations = props.data.map((destination, id) => {
     return <Link
+      key={id}
       to={`/${destination.id}`}
       onClick={() => props.handleDetails(destination.id)}>
       <SingleDestination
