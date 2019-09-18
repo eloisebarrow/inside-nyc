@@ -13,7 +13,9 @@ function Destinations(props) {
   return (
     <div className="destinations">
       <h1>{props.title}</h1>
-      {destinations}
+      <div className="listContainer">
+        {destinations}
+      </div>
     </div>
   );
 }

@@ -1,9 +1,15 @@
+html, body {
+  height:100%;
+}
+
 .App {
   text-align: center;
+  height:100%;
 }
 
 body {
   background-color: rgb(52, 131, 235);
+  overflow: hidden;
 }
 
 .header {
@@ -14,17 +20,32 @@ body {
   background-color: yellow;
   position: fixed;
   top: 0;
-  width: 100%
+  width: 100%;
+  height: 15vh;
+}
+
+.header h1 {
+  margin: 10px;
 }
 
 .main {
- display: flex;
- flex-direction: column;
+  margin-top: 15vh;
+  height: 80vh;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.single-destination {
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .footer {
-  position: sticky;
-  bottom: auto;
+  position: static;
+  bottom: 0;
+  height: 5vh;
   background-color: yellow;
 }
 
@@ -36,8 +57,16 @@ body {
     flex-direction: row;
   }
 
-  .main {
+  .header h1 {
+    margin: 21px;
+  }
+
+  .listContainer {
     display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    text-align: center;
+    margin: 5%;
 
   }
 
