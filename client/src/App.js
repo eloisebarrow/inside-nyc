@@ -3,6 +3,7 @@ import './App.css';
 import Main from './components/main';
 import Header from './components/header';
 import Footer from './components/footer';
+import { withRouter } from 'react-router';
 
 import {
   showBites, showSites,
@@ -13,6 +14,7 @@ import {
 
 
 class App extends React.Component {
+
   state = {
     bites: [],
     sites: [],
@@ -22,7 +24,8 @@ class App extends React.Component {
       email: '',
       nickname: '',
       password: ''
-    }
+    },
+    error: ''
   }
 
   handleLike = (destinationId) => {
@@ -62,27 +65,55 @@ class App extends React.Component {
 
   handleRegister = async () => {
     const currentUser = await registerUser(this.state.formData);
-    this.setState({
-      currentUser,
-      formData: {
-        email: '',
-        nickname: '',
-        password: ''
-      }
-     });
+    if (currentUser.error) {
+      this.setState({
+        error: "Invalid Credentials",
+        formData: {
+          email: '',
+          nickname: '',
+          password: ''
+        }
+      })
+    } else {
+      this.setState({
+        currentUser,
+        formData: {
+          email: '',
+          nickname: '',
+          password: ''
+        },
+        error: ''
+       });
+       this.props.history.push('/home')
+    }
+
   }
 
   handleLogin = async () => {
     const currentUser = await loginUser(this.state.formData);
-    this.setState({
-      currentUser,
-      formData: {
-        email: '',
-        nickname: '',
-        password: ''
-      }
-     });
-    this.getFavorites(currentUser.id)
+    if (currentUser.error) {
+      this.setState({
+        error: "Invalid Credentials",
+        formData: {
+          email: '',
+          nickname: '',
+          password: ''
+        }
+      })
+    } else {
+      this.setState({
+        currentUser,
+        formData: {
+          email: '',
+          nickname: '',
+          password: ''
+        },
+        error: ''
+       });
+       this.getFavorites(currentUser.id)
+       this.props.history.push('/home')
+    }
+
   }
 
   getBites = async () => {
@@ -116,7 +147,6 @@ class App extends React.Component {
       <div className="App">
         <Header
           handleSignOut={this.handleSignOut}
-          currentUser={this.state.currentUser}
         />
         <Main
           sites={this.state.sites}
@@ -124,6 +154,7 @@ class App extends React.Component {
           favorites={this.state.favorites}
           currentUser={this.state.currentUser}
           formData={this.state.formData}
+          error={this.state.error}
           handleLogin={this.handleLogin}
           handleRegister={this.handleRegister}
           handleChange={this.handleChange}
@@ -135,4 +166,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default withRouter(App);

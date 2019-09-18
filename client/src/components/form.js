@@ -1,7 +1,8 @@
 import React from "react";
-import { Link, withRouter } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Form = props => {
+
   return (
     <>
       <h2>{props.title}</h2>
@@ -9,10 +10,8 @@ const Form = props => {
         e.preventDefault()
         if (props.title === "register"){
           props.handleRegister();
-          props.history.push('/home')
         } else {
           props.handleLogin();
-          props.history.push('/home')
         }
       }}>
         <label htmlFor="email">Email: </label>
@@ -49,8 +48,9 @@ const Form = props => {
           )
         }
       </form>
+      <p>{props.error}</p>
     </>
   )
 }
 
-export default withRouter(Form);
+export default Form;

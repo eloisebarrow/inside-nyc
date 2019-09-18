@@ -7,18 +7,30 @@ const api = axios.create({
 })
 
 export const showBites = async () => {
-  const bites = await api.get(`/bites`);
-  return bites.data;
+  try {
+    const bites = await api.get(`/bites`);
+    return bites.data;
+  } catch (e) {
+    console.log(e.message);
+  }
 }
 
 export const showSites = async () => {
-  const sites = await api.get(`/sites`);
-  return sites.data;
+  try {
+    const sites = await api.get(`/sites`);
+    return sites.data;
+  } catch (e) {
+    console.log(e.message);
+  }
 }
 
 export const showFavorites = async (userId) => {
-  const favorites = await api.get(`/favorites`);
-  return favorites.data;
+  try {
+    const favorites = await api.get(`/favorites`);
+    return favorites.data;
+  } catch (e) {
+    console.log(e.message);
+  }
 }
 
 export const addFavorite = async (destinationId) => {
@@ -38,27 +50,39 @@ export const deleteFavorite = async (destinationId) => {
 }
 
 export const loginUser = async (loginData) => {
-  const resp = await api.post(`/auth/login`, loginData);
-  localStorage.setItem('authToken', resp.data.token);
-  api.defaults.headers.common.authorization = `Bearer ${resp.data.token}`;
-  return resp.data.user
+  try {
+    const resp = await api.post(`/auth/login`, loginData);
+    localStorage.setItem('authToken', resp.data.token);
+    api.defaults.headers.common.authorization = `Bearer ${resp.data.token}`;
+    return resp.data.user
+  } catch (e) {
+    return { error: e.message };
+  }
 }
 
 export const registerUser = async (registerData) => {
-  const resp = await api.post(`/auth/register`, registerData);
-  localStorage.setItem('authToken', resp.data.token);
-  api.defaults.headers.common.authorization = `Bearer ${resp.data.token}`;
-  return resp.data.user
+  try {
+    const resp = await api.post(`/auth/register`, registerData);
+    localStorage.setItem('authToken', resp.data.token);
+    api.defaults.headers.common.authorization = `Bearer ${resp.data.token}`;
+    return resp.data.user
+  } catch (e) {
+    return { error: e.message };
+  }
 }
 
 export const verifyUser = async () => {
-  const token = localStorage.getItem('authToken');
-  if (token) {
-    api.defaults.headers.common.authorization = `Bearer ${token}`;
-    const resp = await api.get('/auth/verify');
-    return resp.data
-  } else {
-    return false;
+  try {
+    const token = localStorage.getItem('authToken');
+    if (token) {
+      api.defaults.headers.common.authorization = `Bearer ${token}`;
+      const resp = await api.get('/auth/verify');
+      return resp.data
+    } else {
+      return false;
+    }
+  } catch (e) {
+    console.log(e.message);
   }
 }
 
