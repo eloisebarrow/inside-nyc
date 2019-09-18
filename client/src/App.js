@@ -146,6 +146,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <Header
+          currentUser={this.state.currentUser}
           handleSignOut={this.handleSignOut}
         />
         <Main
