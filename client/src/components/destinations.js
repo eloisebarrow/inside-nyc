@@ -7,6 +7,7 @@ function Destinations(props) {
       key={id}
       data={destination}
       favorites={props.favorites}
+      handleLike={props.handleLike}
     />
   });
 

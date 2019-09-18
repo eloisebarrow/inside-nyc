@@ -33,6 +33,22 @@ export const showFavorites = async (userId) => {
   }
 }
 
+export const addFavorite = async (destinationId) => {
+  try {
+    const favorites = await api.post(`/favorites/${destinationId}`);
+  } catch (e) {
+    console.log(e.message);
+  }
+}
+
+export const deleteFavorite = async (destinationId) => {
+  try {
+    const favorites = await api.delete(`/favorites/${destinationId}`);
+  } catch (e) {
+    console.log(e.message);
+  }
+}
+
 export const loginUser = async (loginData) => {
   try {
     const resp = await api.post(`/auth/login`, loginData);

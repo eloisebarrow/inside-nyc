@@ -14,33 +14,26 @@ favoritesController.get('/', restrict, async (req, res, next) => {
   }
 });
 
-// favoritesController.post('/', async (req, res, next) => {
-//   try {
-//     const newDesination = await Desination.create(req.body);
-//     res.json(newDesination);
-//   } catch (e) {
-//     next(e);
-//   }
-// });
-//
-// favoritesController.put('/:id', async (req, res, next) => {
-//   try {
-//     const desination = await Desination.findByPk(req.params.id);
-//     await desination.update(req.body)
-//     res.json(desination);
-//   } catch (e) {
-//     next(e);
-//   }
-// });
-//
-// favoritesController.delete('/:id', async (req, res, next) => {
-//   try {
-//     const desination = await Desination.findByPk(req.params.id);
-//     await desination.destroy();
-//     res.json(desination);
-//   } catch (e) {
-//     next(e);
-//   }
-// });
+favoritesController.post('/:id', restrict, async (req, res, next) => {
+  try {
+    const newFavorite = await Destination.findByPk(req.params.id);
+    const user = await User.findByPk(res.locals.user.id);
+    await user.addDestination(newFavorite);
+    res.status(200);
+  } catch (e) {
+    next(e);
+  }
+});
+
+favoritesController.delete('/:id', restrict, async (req, res, next) => {
+  try {
+    const deleteFavorite = await Destination.findByPk(req.params.id);
+    const user = await User.findByPk(res.locals.user.id);
+    await user.removeDestination(deleteFavorite);
+    res.status(200);
+  } catch (e) {
+    next(e);
+  }
+});
 
 module.exports = favoritesController;

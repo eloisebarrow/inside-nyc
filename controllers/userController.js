@@ -44,7 +44,8 @@ userController.post('/login', async (req, res, next) => {
 userController.get('/verify', restrict, async (req, res, next) => {
   try {
     const user = await User.findByPk(res.locals.user.id);
-    res.json(user)
+    const {password_digest, ...responseData} = user.dataValues;
+    res.json(responseData);
   } catch (e) {
     next(e);
   }
