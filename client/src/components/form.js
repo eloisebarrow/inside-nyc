@@ -36,7 +36,7 @@ const Form = props => {
         <label htmlFor="password">Password: </label>
         <input onChange={(e) => props.handleChange(e)}
           id="password"
-          type="text"
+          type="password"
           name="password"
           value={props.formData.password}
         />
