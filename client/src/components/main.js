@@ -8,11 +8,12 @@ function Main(props) {
   return (
     <div className="main">
       <Switch>
-        <Route path='/favorites/user/:user_id' render={() => (
+        <Route path='/favorites' render={() => (
           <Destinations
             title={'FAVORITES'}
             data={props.favorites}
             favorites={props.favorites}
+            handleLike={props.handleLike}
           />
         )}/>
         <Route path='/bites' render={() => (
@@ -20,6 +21,7 @@ function Main(props) {
             title={'BITES'}
             data={props.bites}
             favorites={props.favorites}
+            handleLike={props.handleLike}
             />
           )}/>
         <Route exact path='/sites' render={() => (
@@ -27,6 +29,7 @@ function Main(props) {
             title={'SITES'}
             data={props.sites}
             favorites={props.favorites}
+            handleLike={props.handleLike}
           />
         )}/>
         <Route exact path='/login' render={() => (

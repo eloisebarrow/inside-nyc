@@ -4,7 +4,12 @@ import Main from './components/main';
 import Header from './components/header';
 import Footer from './components/footer';
 
-import { showBites, showSites, showFavorites, registerUser, loginUser, verifyUser } from './services/api-helper';
+import {
+  showBites, showSites,
+  showFavorites, registerUser,
+  loginUser, verifyUser,
+  addFavorite, deleteFavorite
+  } from './services/api-helper';
 
 
 class App extends React.Component {
@@ -17,6 +22,24 @@ class App extends React.Component {
       email: '',
       nickname: '',
       password: ''
+    }
+  }
+
+  handleLike = (destinationId) => {
+    console.log(destinationId);
+    if (this.state.favorites.find((favorite) => favorite.id === destinationId)) {
+      deleteFavorite(destinationId);
+      this.setState(prevState => ({
+        favorites: prevState.favorites.filter((favorite) => favorite.id !== destinationId)
+      }));
+    } else {
+      const bite = this.state.bites.find((bite) => bite.id === destinationId);
+      const site = this.state.sites.find((site) => site.id === destinationId);
+      const newFavorite = bite ? bite : site;
+      addFavorite(destinationId);
+      this.setState(prevState => ({
+        favorites: [...prevState.favorites, newFavorite]
+      }));
     }
   }
 
@@ -100,10 +123,11 @@ class App extends React.Component {
           bites={this.state.bites}
           favorites={this.state.favorites}
           currentUser={this.state.currentUser}
+          formData={this.state.formData}
           handleLogin={this.handleLogin}
           handleRegister={this.handleRegister}
           handleChange={this.handleChange}
-          formData={this.state.formData}
+          handleLike={this.handleLike}
         />
         <Footer />
       </div>

@@ -21,6 +21,22 @@ export const showFavorites = async (userId) => {
   return favorites.data;
 }
 
+export const addFavorite = async (destinationId) => {
+  try {
+    const favorites = await api.post(`/favorites/${destinationId}`);
+  } catch (e) {
+    console.log(e.message);
+  }
+}
+
+export const deleteFavorite = async (destinationId) => {
+  try {
+    const favorites = await api.delete(`/favorites/${destinationId}`);
+  } catch (e) {
+    console.log(e.message);
+  }
+}
+
 export const loginUser = async (loginData) => {
   const resp = await api.post(`/auth/login`, loginData);
   localStorage.setItem('authToken', resp.data.token);
