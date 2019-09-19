@@ -4,30 +4,35 @@
   justify-content: flex-start;
   align-items: center;
   height: 100%;
-  border: solid 2px green;
+  margin: 0 5%;
 }
 
 .bites-div {
-  background-image: url('https://cdn.vox-cdn.com/thumbor/2bbzAXZf1-LjXY-Y46KGqhP5k0M=/0x0:3500x2000/570x321/filters:focal(1470x720:2030x1280):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/65088847/New_York_City_Central_Park_from_Above.0.jpg');
+  background-image: url('https://www.tracysnewyorklife.com/wp-content/uploads/2013/07/ScreenShot2016-04-28at12.09.13PM.png');
   background-size: cover;
+  background-position: bottom;
   color: white;
+  font-size: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
   border: 1px solid black;
   width: 100%;
   height: 30%;
+  margin: 4% 0;
 }
 .sites-div {
   background-image: url('https://cdn.vox-cdn.com/thumbor/2bbzAXZf1-LjXY-Y46KGqhP5k0M=/0x0:3500x2000/570x321/filters:focal(1470x720:2030x1280):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/65088847/New_York_City_Central_Park_from_Above.0.jpg');
   background-size: cover;
   color: white;
+  font-size: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
   border: 1px solid black;
   width: 100%;
   height: 30%;
+  margin: 4% 0;
 }
 .fave {
   border: none;
@@ -43,15 +48,24 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    width: 500px;
+    width: 100%;
     max-width: 905px;
     height: 100%;
     margin: 0 auto;
   }
-
-  .category-divs {
-    width: 300px;
-    height: 150px;
-    margin-top: 2%;
+  .bites-div {
+    height: 40%;
+    width: 45%;
+    margin: 4% 0;
+  }
+  .sites-div {
+    height: 40%;
+    width: 45%;
+    margin: 4% 0;
+  }
+  .fave {
+    height: 30%;
+    width: 45%;
+    margin: 4% 0;
   }
 }
