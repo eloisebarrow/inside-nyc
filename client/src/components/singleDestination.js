@@ -5,12 +5,13 @@ import './singleDestination.css';
 function SingleDestination(props) {
   const backgroundStyles = {
     backgroundImage: `url(${props.image})`,
-    backgroundSize: 'cover'
+    backgroundSize: 'cover',
+    width: '100%',
+    height: '100%'
   }
 
   return (
     <div  style={backgroundStyles}className="single-destination">
-      {/*<img src={props.image} />*/}
       <h4>{props.data.name}</h4>
       {
         <Like
