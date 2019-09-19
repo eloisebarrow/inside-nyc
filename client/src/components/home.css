@@ -1,0 +1,17 @@
+.categories {
+  display: flex;
+  justify-content: space-evenly;
+  border: 1px solid black;
+  max-width: 700px;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+.category-divs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  width: 250px;
+  height: 250px;
+}

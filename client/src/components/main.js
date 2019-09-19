@@ -1,4 +1,5 @@
 import React from 'react';
+import './main.css';
 import Login from './login';
 import Home from './home';
 import Destinations from './destinations';
