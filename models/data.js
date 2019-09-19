@@ -372,29 +372,7 @@ const destinations = [
     longitude: -73.97840094031568,
     image_url: "https://images.getbento.com/accounts/7f97f4513242cadcff9bdb1d2545ed6e/media/images/7922Calexico_Upper_East_Side.jpg?w=1800&fit=max&auto=compress,format&h=1800",
     type: "bites"
-  },
-  // {
-  //   name: "",
-  //   borough: "",
-  //   address: "",
-  //   website: "",
-  //   description: "",
-  //   latitude: ,
-  //   longitude: ,
-  //   image_url: "",
-  //   type: "sites"
-  // },
-  // {
-  //   name: "",
-  //   borough: "",
-  //   address: "",
-  //   website: "",
-  //   description: "",
-  //   latitude: ,
-  //   longitude: ,
-  //   image_url: "",
-  //   type: "sites"
-  // },
+  }
 ];
 
 module.exports = destinations;
