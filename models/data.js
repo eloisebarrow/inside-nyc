@@ -128,7 +128,7 @@ const destinations = [
     description: "Fine British Cuisine and a great view of Central Park",
     latitude: 40.768429,
     longitude: -73.983070,
-    image_url: "https://cdn.vox-cdn.com/thumbor/Ug1g4W9b7ZTR3J02sKdGaDMjbC8=/0x0:5760x3840/1200x0/filters:focal(0x0:5760x3840):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/12922207/Bluebird_28.jpg",
+    image_url: "https://media-cdn.tripadvisor.com/media/photo-s/11/54/22/dd/restaurant.jpg",
     type: "bites"
   },
   {
@@ -339,7 +339,62 @@ const destinations = [
     longitude: -73.9845,
     image_url: "https://upload.wikimedia.org/wikipedia/commons/4/47/New_york_times_square-terabass.jpg",
     type: "sites"
-  }
+  },
+  {
+    name: "I Sodi",
+    borough: "Manhattan",
+    address: "105 Christopher Street",
+    website: "http://www.isodinyc.com/",
+    description: "Tuscan-style fare, wines & cocktails lie in store at this compact, romantic restaurant.",
+    latitude: 40.7334635,
+    longitude: -74.0072112,
+    image_url: "https://images.squarespace-cdn.com/content/v1/56e9548fab48de7b7fc48949/1494444977882-ATI62C1HJC201Z51I3QK/ke17ZwdGBToddI8pDm48kFWxnDtCdRm2WA9rXcwtIYR7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UcTSrQkGwCGRqSxozz07hWZrYGYYH8sg4qn8Lpf9k1pYMHPsat2_S1jaQY3SwdyaXg/SL+cacio+e+pepe+.jpg",
+    type: "bites"
+  },
+  {
+    name: "Socarrat Paella Bar",
+    borough: "Manhattan",
+    address: "259 West 19th Street",
+    website: "https://socarratnyc.com/",
+    description: "Stylish, brick-walled Spanish eatery specializing in paella, with tapas & paired beverages.",
+    latitude: 40739885,
+    longitude: -73983987,
+    image_url: "https://socarratnyc.com/wp-content/uploads/2019/07/Socarrat-NYC-Paella.jpeg",
+    type: "bites"
+  },
+  {
+    name: "Calexico",
+    borough: "Brooklyn",
+    address: "278 5th Avenue",
+    website: "https://www.calexico.com/",
+    description: "Mexican eatery plating tacos, burritos & more in an upbeat space with exposed rafters & brick walls.",
+    latitude: 40.674046,
+    longitude: -73.97840094031568,
+    image_url: "https://images.getbento.com/accounts/7f97f4513242cadcff9bdb1d2545ed6e/media/images/7922Calexico_Upper_East_Side.jpg?w=1800&fit=max&auto=compress,format&h=1800",
+    type: "bites"
+  },
+  {
+    name: "",
+    borough: "",
+    address: "",
+    website: "",
+    description: "",
+    latitude: ,
+    longitude: ,
+    image_url: "",
+    type: "sites"
+  },
+  {
+    name: "",
+    borough: "",
+    address: "",
+    website: "",
+    description: "",
+    latitude: ,
+    longitude: ,
+    image_url: "",
+    type: "sites"
+  },
 ];
 
 module.exports = destinations;
