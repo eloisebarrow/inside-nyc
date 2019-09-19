@@ -24,7 +24,7 @@ const Form = props => {
         {
           props.title === "register" && (
             <>
-              <label htmlFor="password">Nickname: </label>
+              <label htmlFor="nickname">Nickname: </label>
               <input onChange={(e) => props.handleChange(e)}
                 id="nickname"
                 type="text"
