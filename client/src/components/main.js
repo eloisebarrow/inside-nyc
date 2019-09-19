@@ -26,6 +26,7 @@ function Main(props) {
             favorites={props.favorites}
             handleLike={props.handleLike}
             handleDetails={props.handleDetails}
+            currentUser={props.currentUser}
             />
           )}/>
         <Route exact path='/sites' render={() => (
@@ -35,6 +36,7 @@ function Main(props) {
             favorites={props.favorites}
             handleLike={props.handleLike}
             handleDetails={props.handleDetails}
+            currentUser={props.currentUser}
           />
         )}/>
         <Route exact path='/login' render={() => (
