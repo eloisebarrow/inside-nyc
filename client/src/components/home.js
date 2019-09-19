@@ -8,18 +8,24 @@ function Home(props) {
 
   return (
     <div className="categories">
-      <Link to="/bites" className="category-divs">
+      <Link to="/bites" className="bites-div">
         <h3>BITES</h3>
       </Link>
-      <Link to="/sites" className="category-divs">
+      <Link to="/sites" className="sites-div">
         <h3>SITES</h3>
       </Link>
       {props.currentUser ? (
-      <Link to='/favorites/user/:user_id' className="category-divs">
-        <h3><FontAwesomeIcon icon={solid} size="6x" color="red"/></h3>
-      </Link> ):( <Link to='/login' className="category-divs">
-        <h3><FontAwesomeIcon icon={solid} size="6x" color="red"/></h3>
-      </Link> )
+        <div className ='fave'>
+          <Link to='/favorites/user/:user_id'>
+            <FontAwesomeIcon icon={solid} size="6x" color="red"/>
+          </Link>
+        </div>
+       ):(
+        <div className ='fave'>
+         <Link to='/login'>
+           <FontAwesomeIcon icon={solid} size="6x" color="red"/>
+         </Link>
+        </div>)
       }
     </div>
   )
