@@ -380,7 +380,7 @@ const destinations = [
     website: "https://www.nycgovparks.org/parks/flushing-meadows-corona-park",
     description: "Great park to walk or bike around and enjoy the sites and sounds",
     latitude: 40.7397,
-    longitude: -73.8408°,
+    longitude: -73.8408,
     image_url: "https://www.nycgo.com/images/venues/1169/flushingmeadowscoronapark_kateglicksberg__x_large.jpg",
     type: "sites"
   },
@@ -390,8 +390,8 @@ const destinations = [
     address: "1071 5th Ave, New York, NY 10128",
     website: "https://www.guggenheim.org",
     description: "Modern art museum in a beautifully designed Frank Lloyd Wright building",
-    latitude: ,
-    longitude: ,
+    latitude: 40.7397,
+    longitude: -73.8408,
     image_url: "https://citydadsgroup.com/nyc/wp-content/uploads/sites/2/2019/07/Guggenheim-museum-750x497.jpg",
     type: "sites"
   }
