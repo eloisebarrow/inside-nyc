@@ -3,9 +3,9 @@ import StarRatingComponent from 'react-star-rating-component';
 
 function Ratings(props) {
   return (
-    <div>
+    <div onClick={(e) => e.stopPropagation()}>
       <StarRatingComponent
-        name={props.destinationId}
+        name={`${props.destinationId}`}
         starCount={5}
         value={props.rating}
         onStarClick={props.onStarClick}

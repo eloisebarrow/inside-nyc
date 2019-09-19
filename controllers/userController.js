@@ -16,7 +16,7 @@ userController.post('/register', async (req, res, next) => {
     const { email, nickname, password } = req.body;
     const password_digest = await hashPassword(password);
     const user = await User.create({ email, nickname, password_digest });
-    const responseData = buildAuthResponse(user);
+    const responseData = buildAuthResponse({...user.dataValues, ratings: []});
     res.json(responseData);
   } catch (e) {
     next(e);

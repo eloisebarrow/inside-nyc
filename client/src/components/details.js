@@ -11,7 +11,7 @@ function Details(props) {
       <p>{props.data.borough}</p>
       <p>{props.data.description}</p>
       <p>{props.data.address}</p>
-      <a href={props.data.website} target="_blank">Website</a>
+      <a href={props.data.website} target="_blank" rel="noopener noreferrer">Website</a>
       <Rating
         destinationId={props.data.id}
         onStarClick={props.onStarClick}
