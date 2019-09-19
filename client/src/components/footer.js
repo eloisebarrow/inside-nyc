@@ -2,7 +2,7 @@ import React from "react";
 
 function Footer() {
   return (
-    <div className="footer">Footer</div>
+    <div className="footer">&copy; AJE 2019</div>
   )
 }
 

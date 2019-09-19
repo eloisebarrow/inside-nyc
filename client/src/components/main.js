@@ -16,7 +16,7 @@ function Main(props) {
             />
           )}/>
         }
-        <Route exact path='/favorites' render={() => (
+        <Route path='/favorites' render={() => (
           <Destinations
             title={'FAVORITES'}
             data={props.favorites}

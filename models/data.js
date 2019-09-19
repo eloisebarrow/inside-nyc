@@ -66,7 +66,7 @@ const destinations = [
     type: "bites"
   },
   {
-    name : "Peter Lugar Steak House",
+    name : "Peter Luger Steak House",
     borough : "Brooklyn",
     website : "https://peterluger.com/",
     image_url : "http://www.johnnyprimesteaks.com/wp-content/uploads/2017/03/DSC03997-672x372.jpg",
