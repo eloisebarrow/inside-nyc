@@ -70,6 +70,7 @@ Local wants to find new places to check out, browses through the site and create
 - Render all restaurant data
 - Render all site data
 - Render individual destination data
+- Render star ratings for each destination and allow for setting and updating of those ratings
 
 ## PostMVP
 
@@ -92,7 +93,7 @@ Local wants to find new places to check out, browses through the site and create
 
 ## Additional Libraries
 
-Mapbox (PostMVP)
+- [React Star Rating Component](https://www.npmjs.com/package/react-star-rating-component)
 
 ## Issues and Resolutions
 
