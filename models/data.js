@@ -348,7 +348,7 @@ const destinations = [
     description: "Tuscan-style fare, wines & cocktails lie in store at this compact, romantic restaurant.",
     latitude: 40.7334635,
     longitude: -74.0072112,
-    image_url: "https://images.squarespace-cdn.com/content/v1/56e9548fab48de7b7fc48949/1494444977882-ATI62C1HJC201Z51I3QK/ke17ZwdGBToddI8pDm48kFWxnDtCdRm2WA9rXcwtIYR7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UcTSrQkGwCGRqSxozz07hWZrYGYYH8sg4qn8Lpf9k1pYMHPsat2_S1jaQY3SwdyaXg/SL+cacio+e+pepe+.jpg",
+    image_url: "https://media.cntraveler.com/photos/5a95ce8a60543c4ae96c2fca/master/pass/I-Sodi_2018_20180218-NYC-Shoot-6.jpg",
     type: "bites"
   },
   {
