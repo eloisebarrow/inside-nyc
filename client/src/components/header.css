@@ -1,3 +1,11 @@
 .header div {
   margin-right: 3%;
 }
+
+button {
+  border-radius: 5%;
+}
+
+.sign-in button {
+  margin: 7% 0;
+}

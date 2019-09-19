@@ -1,4 +1,5 @@
 import React from 'react';
+import './destination.css';
 import SingleDestination from './singleDestination';
 import { Link, withRouter } from "react-router-dom"
 
