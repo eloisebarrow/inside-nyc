@@ -35,21 +35,22 @@ class App extends React.Component {
   // =========================================
 
   onStarClick = async (nextValue, prevValue, name) => {
+    const id = parseInt(name);
     if (this.state.currentUser) {
       const ratingsIdArr = this.state.currentUser.ratings.map((rating) => rating.destinationId);
-      if (ratingsIdArr.includes(name)) { // UPDATES A RATING
-        const currentRating = this.state.currentUser.ratings.find((rating) => rating.destinationId === name);
-        const updatedRating = await this.updateRating(currentRating.id, name, nextValue);
+      if (ratingsIdArr.includes(id)) { // UPDATES A RATING
+        const currentRating = this.state.currentUser.ratings.find((rating) => rating.destinationId === id);
+        const updatedRating = await this.updateRating(currentRating.id, id, nextValue);
         this.setState(prevState => ({
           currentUser: {
             ...prevState.currentUser,
             ratings: prevState.currentUser.ratings.map(rating => {
-              return rating.destinationId === name ? updatedRating : rating
+              return rating.destinationId === id ? updatedRating : rating
             })
           }
         }));
       } else { // POSTS A RATING
-        const newRating = await this.createRating(name, nextValue);
+        const newRating = await this.createRating(id, nextValue);
         this.setState(prevState => ({
           currentUser: {
             ...prevState.currentUser,
@@ -63,11 +64,9 @@ class App extends React.Component {
     } else {
       this.props.history.push('/login');
     }
-
   }
 
   handleDetails = (destinationId) => {
-    console.log(destinationId);
     const destination = [...this.state.bites, ...this.state.sites].find(destination =>
       destination.id === destinationId);
     this.setState({ details: destination });

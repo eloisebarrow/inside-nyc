@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import './header.css';
 
 function Header(props) {
-  console.log(props);
   return (
     <div className="header">
       <Link to="/">
