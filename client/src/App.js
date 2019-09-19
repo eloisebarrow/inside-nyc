@@ -137,7 +137,6 @@ class App extends React.Component {
 
   getSites = async () => {
     const sites = await showSites();
-
     this.setState({ sites })
   }
 
