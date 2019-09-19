@@ -18,6 +18,8 @@ function Main(props) {
             handleLike={props.handleLike}
             handleDetails={props.handleDetails}
             currentUser={props.currentUser}
+            onStarClick={props.onStarClick}
+            ratings={props.currentUser? props.currentUser.ratings: []}
           />
         )}/>
         <Route exact path='/bites' render={() => (
@@ -28,6 +30,8 @@ function Main(props) {
             handleLike={props.handleLike}
             handleDetails={props.handleDetails}
             currentUser={props.currentUser}
+            onStarClick={props.onStarClick}
+            ratings={props.currentUser? props.currentUser.ratings: []}
             />
           )}/>
         <Route exact path='/sites' render={() => (
@@ -38,6 +42,8 @@ function Main(props) {
             handleLike={props.handleLike}
             handleDetails={props.handleDetails}
             currentUser={props.currentUser}
+            onStarClick={props.onStarClick}
+            ratings={props.currentUser? props.currentUser.ratings: []}
           />
         )}/>
         <Route exact path='/login' render={() => (
@@ -57,7 +63,7 @@ function Main(props) {
             <Details
             data={props.details}
             onStarClick={props.onStarClick}
-            ratings={props.currentUser.ratings}
+            ratings={props.currentUser? props.currentUser.ratings: []}
             />
           )}/>
         }
