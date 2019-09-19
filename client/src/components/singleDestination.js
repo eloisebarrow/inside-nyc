@@ -16,7 +16,10 @@ function SingleDestination(props) {
         <Like
         favorites={props.favorites}
         data={props.data}
-        handleLike={props.handleLike}/>
+        handleLike={props.handleLike}
+        currentUser={props.currentUser}
+        />
+
       }
     </div>
   );
