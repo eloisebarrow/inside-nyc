@@ -1,14 +1,14 @@
 const { Router } = require('express');
-const { User } = require('../models/models');
+const { User, Rating, Destination } = require('../models/models');
 const { hashPassword, genToken, checkPassword, restrict } = require('../auth')
 
 const userController = Router();
 
 const buildAuthResponse = (user) => {
-  const { id, username, nickname } = user;
+  const { id, username, nickname, ratings } = user;
   const tokenData = { id, username };
   const token = genToken(tokenData);
-  return { user: { id, username, nickname }, token }
+  return { user: { id, username, nickname, ratings }, token }
 };
 
 userController.post('/register', async (req, res, next) => {
@@ -28,6 +28,9 @@ userController.post('/login', async (req, res, next) => {
     const { email, password } = req.body;
     const user = await User.findOne({
       where: { email },
+      include: [
+        { model: Rating }
+      ]
     });
     const passwordIsCorrect = await checkPassword(password, user.password_digest)
     if (passwordIsCorrect) {
@@ -43,7 +46,14 @@ userController.post('/login', async (req, res, next) => {
 
 userController.get('/verify', restrict, async (req, res, next) => {
   try {
-    const user = await User.findByPk(res.locals.user.id);
+    const user = await User.findOne({
+      where: {
+        id: res.locals.user.id
+      },
+      include: [
+        { model: Rating }
+      ]
+    });
     const {password_digest, ...responseData} = user.dataValues;
     res.json(responseData);
   } catch (e) {

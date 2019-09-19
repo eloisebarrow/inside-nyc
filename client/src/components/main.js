@@ -10,7 +10,6 @@ function Main(props) {
   return (
     <div className="main">
       <Switch>
-
         <Route path='/favorites' render={() => (
           <Destinations
             title={'FAVORITES'}
@@ -57,6 +56,8 @@ function Main(props) {
           <Route exact path={`/:${props.details.id}`} render={() => (
             <Details
             data={props.details}
+            onStarClick={props.onStarClick}
+            ratings={props.currentUser.ratings}
             />
           )}/>
         }

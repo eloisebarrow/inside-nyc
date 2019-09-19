@@ -86,12 +86,20 @@ export const verifyUser = async () => {
   }
 }
 
-// export const showRatings = (ratingId, ratingData) => {
-//   const rating = await axios.post(`${BASE_URL}/destinations/${ratingId}`, ratingData);
-//   return rating.data;
-// }
-//
-// export const removeFavorite = (userId) => {
-//   const favorite = await axios.get(`${BASE_URL}/favorites/user/${userId}`);
-//   return favorite;
-// }
+export const postRating = async (destinationId, rating) => {
+  try {
+    const resp = await api.post(`/ratings`, { destinationId, rating });
+    return resp.data
+  } catch (e) {
+    console.log(e.message);
+  }
+}
+
+export const putRating = async (ratingId, destinationId, rating) => {
+  try {
+    const resp = await api.put(`/ratings/${ratingId}`, { destinationId, rating });
+    return resp.data
+  } catch (e) {
+    console.log(e.message);
+  }
+}
