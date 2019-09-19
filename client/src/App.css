@@ -1,7 +1,6 @@
 html, body {
   height: 100%;
-  font-family: 'Nunito', sans-serif;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.05rem;
 }
 
 .App {
