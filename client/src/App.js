@@ -9,7 +9,8 @@ import {
   showBites, showSites,
   showFavorites, registerUser,
   loginUser, verifyUser,
-  addFavorite, deleteFavorite
+  addFavorite, deleteFavorite,
+  postRating, putRating
   } from './services/api-helper';
 
 
@@ -26,21 +27,46 @@ class App extends React.Component {
       password: ''
     },
     error: '',
-    details: null,
-    rating: 0
+    details: null
   }
 
-  onStarClick = (nextValue, prevValue, name) => {
-   this.setState({rating: nextValue});
+  // =========================================
+  // ===================== DETAILS/FAVE/RATING
+  // =========================================
+
+  onStarClick = async (nextValue, prevValue, name) => {
+    const ratingsIdArr = this.state.currentUser.ratings.map((rating) => rating.destinationId);
+    if (ratingsIdArr.includes(name)) { // UPDATES A RATING
+      const currentRating = this.state.currentUser.ratings.find((rating) => rating.destinationId === name);
+      const updatedRating = await this.updateRating(currentRating.id, name, nextValue);
+      debugger;
+      this.setState(prevState => ({
+        currentUser: {
+          ...prevState.currentUser,
+          ratings: prevState.currentUser.ratings.map(rating => {
+            return rating.destinationId === name ? updatedRating : rating
+          })
+        }
+      }));
+    } else { // POSTS A RATING
+      const newRating = await this.createRating(name, nextValue);
+      this.setState(prevState => ({
+        currentUser: {
+          ...prevState.currentUser,
+          ratings: [
+          ...prevState.currentUser.ratings,
+          newRating
+          ]
+        }
+      }));
+    }
   }
 
   handleDetails = (destinationId) => {
     console.log(destinationId);
     const destination = [...this.state.bites, ...this.state.sites].find(destination =>
       destination.id === destinationId);
-    this.setState({
-      details: destination
-    });
+    this.setState({ details: destination });
   }
 
   handleLike = (destinationId) => {
@@ -59,6 +85,10 @@ class App extends React.Component {
       }));
     }
   }
+
+  // =========================================
+  // ===================== LOGIN/REGISTER/FORM
+  // =========================================
 
   handleSignOut = () => {
     this.setState(prevState => ({
@@ -100,7 +130,6 @@ class App extends React.Component {
        });
        this.props.history.push('/home')
     }
-
   }
 
   handleLogin = async () => {
@@ -135,6 +164,18 @@ class App extends React.Component {
     })
   }
 
+  // =========================================
+  // =========================== API FUNCTIONS
+  // =========================================
+
+  updateRating = async (ratingId, destinationId, rating) => {
+    return await putRating(ratingId, destinationId, rating);
+  }
+
+  createRating = async (destinationId, rating) => {
+    return await postRating(destinationId, rating);
+  }
+
   getBites = async () => {
     const bites = await showBites();
     this.setState({ bites })
@@ -142,7 +183,6 @@ class App extends React.Component {
 
   getSites = async () => {
     const sites = await showSites();
-
     this.setState({ sites })
   }
 
@@ -150,6 +190,10 @@ class App extends React.Component {
     const favorites = await showFavorites(userId);
     this.setState({ favorites })
   }
+
+  // =========================================
+  // ======================= componentDidMount
+  // =========================================
 
   componentDidMount = async () => {
     this.getBites();
@@ -177,7 +221,6 @@ class App extends React.Component {
           currentUser={this.state.currentUser}
           formData={this.state.formData}
           error={this.state.error}
-          rating={this.state.rating}
           handleLogin={this.handleLogin}
           handleRegister={this.handleRegister}
           handleChange={this.handleChange}

@@ -3,7 +3,6 @@ import SingleDestination from './singleDestination';
 import { Link } from "react-router-dom"
 
 function Destinations(props) {
-  console.log(props.data);
   const destinations = props.data.map((destination, id) => {
     return <Link
       key={id}

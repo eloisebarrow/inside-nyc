@@ -14,7 +14,7 @@ function Main(props) {
             <Details
             data={props.details}
             onStarClick={props.onStarClick}
-            rating={props.rating}
+            ratings={props.currentUser.ratings}
             />
           )}/>
         }

@@ -5,10 +5,10 @@ function Ratings(props) {
   return (
     <div>
       <StarRatingComponent
-        name="rating"
+        name={props.destinationId}
         starCount={5}
         value={props.rating}
-        onStarClick={props.onStarClick.bind(this)}
+        onStarClick={props.onStarClick}
       />
     </div>
   )
