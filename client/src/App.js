@@ -39,7 +39,6 @@ class App extends React.Component {
     if (ratingsIdArr.includes(name)) { // UPDATES A RATING
       const currentRating = this.state.currentUser.ratings.find((rating) => rating.destinationId === name);
       const updatedRating = await this.updateRating(currentRating.id, name, nextValue);
-      debugger;
       this.setState(prevState => ({
         currentUser: {
           ...prevState.currentUser,
