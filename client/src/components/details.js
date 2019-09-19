@@ -5,7 +5,6 @@ function Details(props) {
 
   const ratingObj = props.ratings.find((rating) => rating.destinationId === props.data.id);
 
-
   return (
     <div>
       <h1>{props.data.name}</h1>

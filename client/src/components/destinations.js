@@ -18,6 +18,7 @@ function Destinations(props) {
         handleLike={props.handleLike}
         currentUser={props.currentUser}
         image={destination.image_url}
+        onStarClick={props.onStarClick}
       />
     </div>
   });
