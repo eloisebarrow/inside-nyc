@@ -26,7 +26,12 @@ class App extends React.Component {
       password: ''
     },
     error: '',
-    details: null
+    details: null,
+    rating: 0
+  }
+
+  onStarClick = (nextValue, prevValue, name) => {
+   this.setState({rating: nextValue});
   }
 
   handleDetails = (destinationId) => {
@@ -172,12 +177,14 @@ class App extends React.Component {
           currentUser={this.state.currentUser}
           formData={this.state.formData}
           error={this.state.error}
+          rating={this.state.rating}
           handleLogin={this.handleLogin}
           handleRegister={this.handleRegister}
           handleChange={this.handleChange}
           handleLike={this.handleLike}
           handleDetails={this.handleDetails}
           handleRemoveError={this.handleRemoveError}
+          onStarClick={this.onStarClick}
         />
         <Footer />
       </div>

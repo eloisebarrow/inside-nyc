@@ -13,6 +13,8 @@ function Main(props) {
           <Route exact path={`/:${props.details.id}`} render={() => (
             <Details
             data={props.details}
+            onStarClick={props.onStarClick}
+            rating={props.rating}
             />
           )}/>
         }
