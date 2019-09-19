@@ -35,30 +35,35 @@ class App extends React.Component {
   // =========================================
 
   onStarClick = async (nextValue, prevValue, name) => {
-    const ratingsIdArr = this.state.currentUser.ratings.map((rating) => rating.destinationId);
-    if (ratingsIdArr.includes(name)) { // UPDATES A RATING
-      const currentRating = this.state.currentUser.ratings.find((rating) => rating.destinationId === name);
-      const updatedRating = await this.updateRating(currentRating.id, name, nextValue);
-      this.setState(prevState => ({
-        currentUser: {
-          ...prevState.currentUser,
-          ratings: prevState.currentUser.ratings.map(rating => {
-            return rating.destinationId === name ? updatedRating : rating
-          })
-        }
-      }));
-    } else { // POSTS A RATING
-      const newRating = await this.createRating(name, nextValue);
-      this.setState(prevState => ({
-        currentUser: {
-          ...prevState.currentUser,
-          ratings: [
-          ...prevState.currentUser.ratings,
-          newRating
-          ]
-        }
-      }));
+    if (this.state.currentUser) {
+      const ratingsIdArr = this.state.currentUser.ratings.map((rating) => rating.destinationId);
+      if (ratingsIdArr.includes(name)) { // UPDATES A RATING
+        const currentRating = this.state.currentUser.ratings.find((rating) => rating.destinationId === name);
+        const updatedRating = await this.updateRating(currentRating.id, name, nextValue);
+        this.setState(prevState => ({
+          currentUser: {
+            ...prevState.currentUser,
+            ratings: prevState.currentUser.ratings.map(rating => {
+              return rating.destinationId === name ? updatedRating : rating
+            })
+          }
+        }));
+      } else { // POSTS A RATING
+        const newRating = await this.createRating(name, nextValue);
+        this.setState(prevState => ({
+          currentUser: {
+            ...prevState.currentUser,
+            ratings: [
+            ...prevState.currentUser.ratings,
+            newRating
+            ]
+          }
+        }));
+      }
+    } else {
+      this.props.history.push('/login');
     }
+
   }
 
   handleDetails = (destinationId) => {
