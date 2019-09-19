@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import './header.css';
 
 function Header(props) {
+  console.log(props);
   return (
     <div className="header">
       <Link to="/">
@@ -11,7 +12,13 @@ function Header(props) {
       </Link>
       <div>
       {props.currentUser ? (
-        <Link to="/login" className="sign-in"><button onClick={props.handleSignOut}>Sign Out</button></Link>
+        <div className="loggedIn">
+          <h3>Hey {props.currentUser.nickname}</h3>
+          <div className="links">
+          <Link to="/favorites"><button>Favorites</button></Link>
+          <Link to="/login" className="sign-in"><button onClick={props.handleSignOut}>Sign Out</button></Link>
+          </div>
+        </div>
       ) : (
         <Link to="/login" className="sign-in"><button onClick={props.handleRemoveError}>Sign In</button></Link>
       )}

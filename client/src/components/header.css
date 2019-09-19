@@ -4,8 +4,46 @@
 
 button {
   border-radius: 5%;
+  margin: 10px;
 }
 
-.sign-in button {
-  margin: 7% 0;
+.loggedIn div {
+  display: flex;
+  justify-content: space-around;
+  margin: 5px;
+}
+
+.loggedIn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+  .loggedIn {
+    margin-top: 0;
+    padding-top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .loggedIn h3 {
+    margin: 0;
+  }
+  .loggedIn div {
+    display: flex;
+    justify-content: space-around;
+    margin: 5px;
+  }
+
+  button {
+    border-radius: 5%;
+    margin: 0;
+  }
+
+  .header h1 {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
 }
