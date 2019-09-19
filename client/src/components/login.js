@@ -1,9 +1,10 @@
 import React from "react";
-import Form from "./form.js"
+import Form from "./form.js";
+import "./login.css";
 
 function Login(props) {
   return (
-    <div>
+    <div className="login-form">
       <Form
         title={props.title}
         {...props}

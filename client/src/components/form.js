@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import './form.css';
 
 const Form = props => {
-
   return (
     <>
       <h2>{props.title}</h2>
