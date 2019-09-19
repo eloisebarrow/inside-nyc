@@ -7,6 +7,7 @@ const sitesController = require('./controllers/sitesController');
 const bitesController = require('./controllers/bitesController');
 const favoritesController = require('./controllers/favoritesController');
 const userController = require('./controllers/userController');
+const ratingsController = require('./controllers/ratingsController');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -19,6 +20,7 @@ app.use('/sites', sitesController);
 app.use('/bites', bitesController);
 app.use('/favorites', favoritesController);
 app.use('/auth', userController);
+app.use('/ratings', ratingsController)
 
 app.use((e, req, res, next) => {
   if (e) {
