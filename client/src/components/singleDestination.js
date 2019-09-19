@@ -12,16 +12,18 @@ function SingleDestination(props) {
 
   return (
     <div  style={backgroundStyles}className="single-destination">
-      <h4>{props.data.name}</h4>
-      {
-        <Like
-        favorites={props.favorites}
-        data={props.data}
-        handleLike={props.handleLike}
-        currentUser={props.currentUser}
-        />
+      <div className="div-details">
+        <h4>{props.data.name}</h4>
+        {
+          <Like
+          favorites={props.favorites}
+          data={props.data}
+          handleLike={props.handleLike}
+          currentUser={props.currentUser}
+          />
 
-      }
+        }
+      </div>
     </div>
   );
 }
