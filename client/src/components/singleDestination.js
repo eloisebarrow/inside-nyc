@@ -18,20 +18,18 @@ function SingleDestination(props) {
   return (
     <div  style={backgroundStyles}className="single-destination">
       <div className="div-details">
-        <h4>{props.data.name}</h4>
-        <div className="fave-rating" onClick={e=> e.stopPropagation()}>
-          <Rating
-            destinationId={props.data.id}
-            onStarClick={props.onStarClick}
-            rating={ratingObj ? ratingObj.rating : 0}
-          />
-          <Like
+        <Like
           favorites={props.favorites}
           data={props.data}
           handleLike={props.handleLike}
           currentUser={props.currentUser}
-          />
-        </div>
+        />
+        <h4>{props.data.name}</h4>
+        <Rating
+          destinationId={props.data.id}
+          onStarClick={props.onStarClick}
+          rating={ratingObj ? ratingObj.rating : 0}
+        />
       </div>
     </div>
   );
