@@ -28,7 +28,6 @@ form {
 
 input {
   margin: 4%;
-  border: 1px solid black;
   border-radius: 2%;
   padding: 3%;
   min-width: 200px;
@@ -39,7 +38,17 @@ button {
   margin: 7%;
   min-width: 100px;
   font-size: 1.01rem;
-  border: 1px solid black;
+  border-radius: 5%;
+}
+
+form button, .register-btn {
+  background-color: #62F5B5;
+  padding: 3% 22%;
+}
+
+.register-btn {
+  max-width: 209px;
+  max-height: 42px;
 }
 
 button:hover {
