@@ -235,7 +235,7 @@ const destinations = [
     borough:"Brooklyn",
     website: "https://www.tripsavvy.com/dumbo-vistors-guide-441920",
     description:"DUMBO short for Down Under the Manhattan Bridge Overpass) is a neighborhood in the New York City borough of Brooklyn.",
-    image_url: "https://www.tripsavvy.com/thmb/vi7NUtol2xXJzCuPKReP_YWwBfA=/350x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-540763429-58fb923c5f9b581d59426e03.jpg",
+    image_url: "https://www.nycgo.com/images/itineraries/42961/soc_fb_dumbo_spots__facebook.jpg",
     address:"New York, NY 11201",
     latitude: 40.692990,
     longitude: -73.990770,
@@ -268,7 +268,7 @@ const destinations = [
     borough:"Manhattan",
     website: "https://www.nycgo.com/attractions/st-marks-place",
     description:"Eighth Street in Manhattan between Third Avenue and Avenue A is known as St. Mark's Place—arguably the East Village’s most notable street and a place bursting with culture via its retail shops, street vendors, restaurants and nightlife.",
-    image_url: "https://lonelyplanetimages.imgix.net/a/g/hi/t/c10eee92e54bace825b28b641d7d5651-st-marks-place.jpg?fit=crop&w=600&h=260, https://lonelyplanetimages.imgix.net/a/g/hi/t/c10eee92e54bace825b28b641d7d5651-st-marks-place.jpg?fit=crop&w=1200&h=520 2x",
+    image_url: "https://cdn.newsday.com/polopoly_fs/1.11606256.1459168474!/httpImage/image.jpg_gen/derivatives/landscape_1280/image.jpg",
     address:"8th Street from Ave A to Third Ave, East Village, New York, NY 10011, 10003, 10009",
     latitude: 40.728590,
     longitude: -73.987650,
@@ -304,7 +304,7 @@ const destinations = [
     description: "Great experience and views from one of the tallest building in Manhattan",
     latitude: 40.7127,
     longitude: -74.0134,
-    image_url: "https://imagez.tmz.com/image/4b/o/2017/06/14/4b90f50f43f55a1c8356359673af4b2d_md.jpg",
+    image_url: "https://amp.businessinsider.com/images/5c0020563815075af600cec3-2732-1366.jpg",
     type: "sites"
   },
   {
