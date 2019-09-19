@@ -1,21 +1,25 @@
 import React from 'react';
+import './destinations.css';
 import SingleDestination from './singleDestination';
-import { Link } from "react-router-dom"
+import { Link, withRouter } from "react-router-dom"
 
 function Destinations(props) {
   const destinations = props.data.map((destination, id) => {
-    return <Link
+    return <div className="link"
       key={id}
-      to={`/${destination.id}`}
-      onClick={() => props.handleDetails(destination.id)}>
+      onClick={() =>{
+        props.history.push(`/${destination.id}`)
+        props.handleDetails(destination.id)
+      }}>
       <SingleDestination
         key={id}
         data={destination}
         favorites={props.favorites}
         handleLike={props.handleLike}
+        currentUser={props.currentUser}
         image={destination.image_url}
       />
-    </Link>
+    </div>
   });
 
   return (
@@ -28,4 +32,4 @@ function Destinations(props) {
   );
 }
 
-export default Destinations;
+export default withRouter(Destinations);

@@ -1,10 +1,10 @@
 html, body {
-  height:100%;
+  height: 100%;
 }
 
 .App {
   text-align: center;
-  height:100%;
+  height: 100%;
 }
 
 body {
@@ -12,8 +12,9 @@ body {
   overflow: hidden;
 }
 
-a {
+a, .link {
   text-decoration: none;
+  cursor: pointer;
 }
 
 .header {
@@ -21,7 +22,6 @@ a {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  /* background-color: yellow; */
   position: fixed;
   top: 0;
   width: 100%;
@@ -33,7 +33,7 @@ a {
 }
 
 .main {
-  margin-top: 15vh;
+  margin-top: 20vh;
   height: 80vh;
   overflow: scroll;
   display: flex;
@@ -41,10 +41,11 @@ a {
 }
 
 .footer {
-  position: static;
+  position: sticky;
   bottom: 0;
   height: 5vh;
   border-top: 1px solid black;
+  width: 100%;
 }
 
 /*tablet*/
@@ -65,7 +66,5 @@ a {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     text-align: center;
     margin: 5%;
-
   }
-
 }

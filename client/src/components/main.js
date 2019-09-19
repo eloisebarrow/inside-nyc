@@ -1,4 +1,5 @@
 import React from 'react';
+import './main.css';
 import Login from './login';
 import Home from './home';
 import Destinations from './destinations';
@@ -9,15 +10,6 @@ function Main(props) {
   return (
     <div className="main">
       <Switch>
-        {props.details &&
-          <Route exact path={`/:${props.details.id}`} render={() => (
-            <Details
-            data={props.details}
-            onStarClick={props.onStarClick}
-            ratings={props.currentUser.ratings}
-            />
-          )}/>
-        }
         <Route path='/favorites' render={() => (
           <Destinations
             title={'FAVORITES'}
@@ -25,6 +17,7 @@ function Main(props) {
             favorites={props.favorites}
             handleLike={props.handleLike}
             handleDetails={props.handleDetails}
+            currentUser={props.currentUser}
           />
         )}/>
         <Route exact path='/bites' render={() => (
@@ -34,6 +27,7 @@ function Main(props) {
             favorites={props.favorites}
             handleLike={props.handleLike}
             handleDetails={props.handleDetails}
+            currentUser={props.currentUser}
             />
           )}/>
         <Route exact path='/sites' render={() => (
@@ -43,6 +37,7 @@ function Main(props) {
             favorites={props.favorites}
             handleLike={props.handleLike}
             handleDetails={props.handleDetails}
+            currentUser={props.currentUser}
           />
         )}/>
         <Route exact path='/login' render={() => (
@@ -57,12 +52,22 @@ function Main(props) {
             {...props}
           />
         )}/>
+        {props.details &&
+          <Route exact path={`/:${props.details.id}`} render={() => (
+            <Details
+            data={props.details}
+            onStarClick={props.onStarClick}
+            ratings={props.currentUser.ratings}
+            />
+          )}/>
+        }
         <Route path='/' render={() => (
           <Home
             title={'HOME'}
             {...props}
           />
         )}/>
+
       </Switch>
     </div>
   );
