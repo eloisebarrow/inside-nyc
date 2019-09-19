@@ -1,11 +1,11 @@
 import React from 'react';
-import './destination.css';
+import './destinations.css';
 import SingleDestination from './singleDestination';
 import { Link, withRouter } from "react-router-dom"
 
 function Destinations(props) {
   const destinations = props.data.map((destination, id) => {
-    return <div
+    return <div className="link"
       key={id}
       onClick={() =>{
         props.history.push(`/${destination.id}`)
