@@ -2,7 +2,7 @@
   padding-bottom: 5%;
 }
 
-/* from w3 schools box-shadow page */
+/* from w3 schools box-shadow: https://www.w3schools.com/cssref/css3_pr_box-shadow.asp */
 .single-destination:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }

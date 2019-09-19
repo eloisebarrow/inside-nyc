@@ -6,7 +6,7 @@ import { Link, withRouter } from "react-router-dom"
 function Destinations(props) {
   console.log(props.data);
   const destinations = props.data.map((destination, id) => {
-    return <div
+    return <div className="link"
       key={id}
       onClick={() =>{
         props.history.push(`/${destination.id}`)
