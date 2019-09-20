@@ -66,7 +66,7 @@ const destinations = [
     type: "bites"
   },
   {
-    name : "Peter Luger Steak House",
+    name : "Peter Luger",
     borough : "Brooklyn",
     website : "https://peterluger.com/",
     image_url : "http://www.johnnyprimesteaks.com/wp-content/uploads/2017/03/DSC03997-672x372.jpg",
@@ -374,7 +374,7 @@ const destinations = [
     type: "bites"
   },
   {
-    name: "Flushing Meadows-Corona Park",
+    name: "Flushing Meadows",
     borough: "Queens",
     address: "Queens, NY",
     website: "https://www.nycgovparks.org/parks/flushing-meadows-corona-park",
@@ -385,7 +385,7 @@ const destinations = [
     type: "sites"
   },
   {
-    name: "The Guggenheim Museum",
+    name: "The Guggenheim",
     borough: "Manhattan",
     address: "1071 5th Ave, New York, NY 10128",
     website: "https://www.guggenheim.org",
