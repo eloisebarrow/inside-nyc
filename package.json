@@ -3,12 +3,16 @@
   "version": "1.0.0",
   "description": "## Contributors",
   "main": "server.js",
+  "engines": {
+    "node": "12.10.0"
+  },
   "scripts": {
     "start": "node server.js",
     "dev": "nodemon server.js",
     "db:create": "dropdb --if-exists -e seenyc_db && createdb -e seenyc_db",
     "db:reset": "node models/resetDb.js",
-    "db:seed": "node models/seed.js"
+    "db:seed": "node models/seed.js",
+    "heroku-postbuild": "npm run build"
   },
   "repository": {
     "type": "git",
