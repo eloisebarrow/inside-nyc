@@ -1,0 +1,13 @@
+.details {
+  max-width: 500px;
+  align-self: center;
+  margin-top: 3%;
+}
+
+.details a {
+  text-decoration: underline;
+}
+
+.dv-star-rating {
+  margin: 3% 0;
+}
