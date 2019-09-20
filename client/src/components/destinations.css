@@ -4,18 +4,8 @@
   margin: 0 auto;
 }
 
-.list-container {
-  max-width: 700px;
-  margin: 0 auto;
-}
-
 @media screen and (min-width: 600px) {
   .link {
-    margin: 4% auto;
-  }
-
-  .list-container {
-    max-width: 1050px;
-    margin: 0 auto;
+    margin: 4%;
   }
 }

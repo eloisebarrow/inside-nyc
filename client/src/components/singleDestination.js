@@ -1,7 +1,7 @@
 import React from 'react';
+import './singleDestination.css';
 import Like from './like';
 import Rating from "./rating"
-import './singleDestination.css';
 
 function SingleDestination(props) {
   const backgroundStyles = {
