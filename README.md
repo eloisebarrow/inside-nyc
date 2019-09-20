@@ -8,7 +8,7 @@ Eloise Barrow
 
 ## Project Links
 - [View Github Repo](https://github.com/eloisebarrow/seeNYC)
-<br>Deployment: TBA
+<br>- [View deployed site](http://see-nyc.surge.sh/)
 
 ## Project Description
 
