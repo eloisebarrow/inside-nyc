@@ -7,8 +7,8 @@ Eloise Barrow
 <br>AJ Jernigan
 
 ## Project Links
-- [View Github Repo](https://github.com/eloisebarrow/seeNYC)
-<br>- [View deployed site](http://see-nyc.surge.sh/)
+[View Github Repo](https://github.com/eloisebarrow/seeNYC)
+<br>[View deployed site](http://see-nyc.surge.sh/)
 
 ## Project Description
 
