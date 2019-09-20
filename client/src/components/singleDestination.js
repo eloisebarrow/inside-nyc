@@ -16,7 +16,7 @@ function SingleDestination(props) {
   }
 
   return (
-    <div  style={backgroundStyles}className="single-destination">
+    <div  style={backgroundStyles} className="single-destination">
       <div className="div-details">
         <Like
           favorites={props.favorites}

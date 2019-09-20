@@ -12,7 +12,7 @@ function Main(props) {
       <Switch>
         <Route path='/favorites' render={() => (
           <Destinations
-            title={'FAVORITES'}
+            title={'Favorites'}
             data={props.favorites}
             favorites={props.favorites}
             handleLike={props.handleLike}
@@ -24,7 +24,7 @@ function Main(props) {
         )}/>
         <Route exact path='/bites' render={() => (
           <Destinations
-            title={'BITES'}
+            title={'Bites'}
             data={props.bites}
             favorites={props.favorites}
             handleLike={props.handleLike}
@@ -36,7 +36,7 @@ function Main(props) {
           )}/>
         <Route exact path='/sites' render={() => (
           <Destinations
-            title={'SITES'}
+            title={'Sites'}
             data={props.sites}
             favorites={props.favorites}
             handleLike={props.handleLike}

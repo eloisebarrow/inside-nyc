@@ -2,12 +2,29 @@
   max-width: 500px;
   align-self: center;
   margin-top: 3%;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .details a {
   text-decoration: underline;
+  color: black;
+}
+
+.details h1 {
+  text-decoration: underline;
+  margin: 10px 0 0 0;
 }
 
 .dv-star-rating {
   margin: 3% 0;
+}
+.info-container {
+  height: 60%;
+  width: 75%;
+
+  background-color: rgba(255,255,255,.7);
 }
