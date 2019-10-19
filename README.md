@@ -9,6 +9,7 @@ Eloise Barrow
 ## Project Links
 [View Github Repo](https://github.com/eloisebarrow/seeNYC)
 <br>[View deployed site](http://see-nyc.surge.sh/)
+<br>[Read my perspective on our process](https://medium.com/@eloiseressbarrow/group-git-goal-hivemind-status-8741570e35d8)
 
 ## Project Description
 
